@@ -6,6 +6,7 @@ export const theme = {
     },
 
     breakPoint: {
-
+        firstBreakPoint: 1200,
+        secondBreakPoint: 1000,
     }
-}
+};

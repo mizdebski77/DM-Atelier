@@ -7,7 +7,8 @@ declare module 'styled-components' {
             secondColor: string;
         }
         breakPoint: {
-
+            firstBreakPoint: number;
+            secondBreakPoint: number;
         };
     }
 }

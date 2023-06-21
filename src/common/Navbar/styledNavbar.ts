@@ -3,27 +3,37 @@ import { NavLink, Link } from "react-router-dom";
 
 export const Wrapper = styled.nav`
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 64px;
+    padding: 20px 40px;
+    gap: 20px;
 `;
 
 export const LogoLink = styled(Link)`
-
+    margin: 0 0 0 40px;
 `;
 
 export const Logo = styled.img`
-    width: 460px;
+    width: 280px;
 `;
 
 export const LinksWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 64px;
+    gap: 20px;
     margin: 0 40px;
-`;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        gap: 20px;
+        margin: 0;
+    };
+        
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        display: none;
+    }
+  `;
 
 const activeClassName = "active";
 
@@ -35,6 +45,7 @@ export const Links = styled(NavLink)`
     border-radius: 20px;
     transition: 0.5s;
     text-underline-offset: 6px;
+    min-width: 140px;    
 
     &:hover {
         transform: translateY(-5px);

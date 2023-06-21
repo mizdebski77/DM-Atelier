@@ -1,7 +1,8 @@
 export const theme = {
     color: {
-        mainColor: "#080404",
-        secondColor: "#f9f5f0",
+        secondColor: "#080404",
+        mainColor: "#f9f5f0",
+
     },
 
     breakPoint: {

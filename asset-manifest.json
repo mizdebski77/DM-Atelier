@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/DM-Atelier/static/js/main.686d6e81.js",
+    "static/js/787.f934530b.chunk.js": "/DM-Atelier/static/js/787.f934530b.chunk.js",
+    "index.html": "/DM-Atelier/index.html",
+    "main.686d6e81.js.map": "/DM-Atelier/static/js/main.686d6e81.js.map",
+    "787.f934530b.chunk.js.map": "/DM-Atelier/static/js/787.f934530b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.686d6e81.js"
+  ]
+}

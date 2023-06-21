@@ -14,4 +14,5 @@ html {
   
 body {
   word-break: break-word;
+  background: ${({theme}) => theme.color.mainColor};
 }`;

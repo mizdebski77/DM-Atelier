@@ -8,14 +8,26 @@ export const Wrapper = styled.nav`
     align-items: center;
     padding: 20px 40px;
     gap: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        padding: 10px;
+    };
 `;
 
 export const LogoLink = styled(Link)`
     margin: 0 0 0 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        margin: 0;
+    };
 `;
 
 export const Logo = styled.img`
-    width: 280px;
+    width: 240px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        width: 200px;
+    };
 `;
 
 export const LinksWrapper = styled.div`
@@ -63,3 +75,17 @@ export const Links = styled(NavLink)`
         }
     }
 `;
+
+export const PhoneNavbar = styled.div`
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: ${({theme}) => theme.color.secondColor};
+
+   @media (min-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        display: none;
+  }
+`;
+
+

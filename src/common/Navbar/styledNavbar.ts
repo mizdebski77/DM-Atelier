@@ -3,11 +3,11 @@ import { NavLink, Link } from "react-router-dom";
 
 export const Wrapper = styled.nav`
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         padding: 10px;
@@ -32,7 +32,7 @@ export const Logo = styled.img`
 
 export const LinksWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
     margin: 0 40px;
@@ -57,7 +57,6 @@ export const Links = styled(NavLink)`
     border-radius: 20px;
     transition: 0.5s;
     text-underline-offset: 6px;
-    min-width: 140px;    
 
     &:hover {
         transform: translateY(-5px);
@@ -79,13 +78,18 @@ export const Links = styled(NavLink)`
 export const PhoneNavbar = styled.div`
     display: flex;
     align-items: center;
+    justify-content: end;
     cursor: pointer;
-    border-radius: 50%;
-    background: ${({theme}) => theme.color.secondColor};
 
    @media (min-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: none;
   }
+`;
+
+export const PhoneNavbarWrapper = styled.div`
+    background: red;
+    position: fixed;
+    width: 100%;
 `;
 
 

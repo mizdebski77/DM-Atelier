@@ -57,6 +57,13 @@ export const Links = styled(NavLink)`
     border-radius: 20px;
     transition: 0.5s;
     text-underline-offset: 6px;
+    padding: 12px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        color: ${({theme}) => theme.color.mainColor};
+        padding: 10px;
+        border-radius: 0;
+    }
 
     &:hover {
         transform: translateY(-5px);
@@ -67,6 +74,11 @@ export const Links = styled(NavLink)`
         background: ${({ theme }) => theme.color.secondColor};
         padding: 10px;
         color: ${({ theme }) => theme.color.mainColor};
+
+        @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+            color: ${({theme}) => theme.color.mainColor};
+            border-bottom: 1px solid ${({theme}) => theme.color.mainColor};
+         }
 
         &:hover {
             transform: none;
@@ -80,6 +92,7 @@ export const PhoneNavbar = styled.div`
     align-items: center;
     justify-content: end;
     cursor: pointer;
+    
 
    @media (min-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: none;
@@ -87,9 +100,16 @@ export const PhoneNavbar = styled.div`
 `;
 
 export const PhoneNavbarWrapper = styled.div`
-    background: red;
+    background: ${({theme}) => theme.color.secondColor};
     position: fixed;
+    display: grid;
+    gap: 20px;
     width: 100%;
+    padding: 20px;
+
+    @media (min-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        display: none;
+  }
 `;
 
 

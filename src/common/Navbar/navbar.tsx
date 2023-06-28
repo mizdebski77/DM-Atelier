@@ -33,10 +33,17 @@ export const Navbar = () => {
 
 
             </Wrapper>
+            {phoneNavbar === true ? (
+                <PhoneNavbarWrapper>
+                    {links.map((link, index) => (
+                        <Links key={index} to={link.link}>
+                            {link.text}
+                        </Links>
+                    ))}
+                </PhoneNavbarWrapper>
+            ) : null}
 
-            <PhoneNavbarWrapper>
-                xd
-            </PhoneNavbarWrapper>
+
         </>
 
     );

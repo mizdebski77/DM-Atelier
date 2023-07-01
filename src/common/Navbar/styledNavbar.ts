@@ -5,9 +5,9 @@ export const Wrapper = styled.nav`
     width: 100%;
     align-items: center;
     padding: 20px 40px;
-    gap: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    z-index: 1;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         padding: 10px;

@@ -3,6 +3,7 @@ import { Links, LinksWrapper, Logo, LogoLink, PhoneNavbar, PhoneNavbarWrapper, W
 import logo from '../Images/DM Logo.png'
 import { Divide as Hamburger } from 'hamburger-react';
 import { links } from './Links';
+import {motion} from 'framer-motion';
 
 export const Navbar = () => {
 
@@ -11,10 +12,6 @@ export const Navbar = () => {
     const openPhoneNavbar = () => {
         setPhoneNavbar(!phoneNavbar);
     };
-
-    console.log(links)
-
-
     return (
         <>
             <Wrapper>
@@ -33,14 +30,20 @@ export const Navbar = () => {
 
 
             </Wrapper>
-            {phoneNavbar === true ? (
-                <PhoneNavbarWrapper>
-                    {links.map((link, index) => (
-                        <Links key={index} to={link.link}>
-                            {link.text}
-                        </Links>
-                    ))}
-                </PhoneNavbarWrapper>
+            {phoneNavbar ? (
+                <motion.div
+                    initial={{ opacity: 0, x: -500 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <PhoneNavbarWrapper>
+                        {links.map((link, index) => (
+                            <Links key={index} to={link.link}>
+                                {link.text}
+                            </Links>
+                        ))}
+                    </PhoneNavbarWrapper>
+                </motion.div>
             ) : null}
 
 

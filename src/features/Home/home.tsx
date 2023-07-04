@@ -1,30 +1,40 @@
 import React from 'react';
-import { CustomSlider, Header, Image, Paragraph, Title, Wrapper } from './styledHome';
+import { AboutImage, AboutSection, AboutSlider, AboutText, AboutTitle, AboutWrapper, OppionsWrapper, Wrapper } from './styledHome';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ex1 from '../../common/Images/Example Images/pngwing.com (1).png'
+import { Header } from './Sections/Header/header';
 export const Home = () => {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear"
+        speed: 1000,
+        autoplaySpeed: 5000,
+        cssEase: "linear",
+        fade: true,
+        arrows: false,
     };
     return (
         <Wrapper>
-            <Header>
-                <Title>D'M Atelier <Paragraph>z miłości do barmaństwa</Paragraph> </Title>
-                <CustomSlider {...settings}>
-                    <Image src={ex1} />
-                    <Image src={ex1} />
-                    <Image src={ex1} />\
-                </CustomSlider>
-            </Header>
+            <Header />
+
+            <AboutWrapper>
+                <AboutTitle>Czym się zajmujemy?</AboutTitle>
+                <AboutSection>
+                    <AboutText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus adipisci illum distinctio ex rem ea, eligendi laudantium autem a minima deleniti tenetur quasi error pariatur, nihil dolores amet est.</AboutText>
+                    <AboutSlider {...settings}>
+                        {/* <AboutImage src={ex1} />
+                        <AboutImage src={ex2} /> */}
+                    </AboutSlider>
+                </AboutSection>
+            </AboutWrapper>
+
+            <OppionsWrapper>
+                xd
+            </OppionsWrapper>
 
         </Wrapper>
     );

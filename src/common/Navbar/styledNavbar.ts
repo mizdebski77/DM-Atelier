@@ -52,7 +52,7 @@ const activeClassName = "active";
 export const Links = styled(NavLink)`
     color: ${({ theme }) => theme.color.secondColor};
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
     border-radius: 20px;
     transition: 0.5s;

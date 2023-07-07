@@ -21,6 +21,8 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
 `;
 
 export const Text = styled.span`

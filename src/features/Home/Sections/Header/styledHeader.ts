@@ -2,11 +2,13 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-    width: 100%;
+     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
+    max-width: 1700px;
+    margin: 0 auto;
 `;
 
 export const Title = styled.h1`

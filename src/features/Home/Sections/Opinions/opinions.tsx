@@ -14,6 +14,7 @@ export const Opinions = () => {
         autoplay: true,
         speed: 1000,
         autoplaySpeed: 5000,
+        arrows: false,
     };
 
     return (
@@ -22,8 +23,8 @@ export const Opinions = () => {
             <CustomSlider {...settings}>
                 {opinions.map((opinion) => (
                     <OpinionWrapper>
-                        <ClientName>{opinion.name}</ClientName>;
-                        <Opinion>{opinion.contents}</Opinion>;
+                        <ClientName>{opinion.name}</ClientName>
+                        <Opinion>{opinion.contents}</Opinion>
                     </OpinionWrapper>
                 ))}
 

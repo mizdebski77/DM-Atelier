@@ -11,7 +11,7 @@ export const Title = styled.h1`
     color: ${({theme}) => theme.color.mainColor};
     font-weight: normal;
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     font-style: italic;
     font-weight: 500;
     margin: 0;

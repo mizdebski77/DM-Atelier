@@ -9,10 +9,11 @@ export const Wrapper = styled.header`
     justify-content: center;
     max-width: 1700px;
     margin: 0 auto;
+    padding: 20px;
 `;
 
 export const Title = styled.h1`
-    font-size: 48px;
+    font-size: 64px;    
     font-style: italic;
     font-weight: 500;
     margin: 0;

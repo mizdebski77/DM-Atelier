@@ -4,6 +4,7 @@ import {  Wrapper } from './styledHome';
 import { Header } from './Sections/Header/header';
 import { About } from './Sections/About/about';
 import { Opinions } from './Sections/Opinions/opinions';
+import { Gallery } from './Sections/Gallery/gallery';
 
 export const Home = () => {
     return (
@@ -11,6 +12,7 @@ export const Home = () => {
             <Header />
             <About />
             <Opinions/>
+            <Gallery/>
         </Wrapper>
     );
 };

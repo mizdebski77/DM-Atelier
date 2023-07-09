@@ -7,11 +7,11 @@ export const Wrapper = styled.section`
     padding: 20px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
     color: ${({theme}) => theme.color.mainColor};
     font-weight: normal;
     text-align: center;
-    font-size: 48px;
+    font-size: 40px;
     font-style: italic;
     font-weight: 500;
     margin: 0;
@@ -27,14 +27,14 @@ export const Container = styled.div`
 
 export const Text = styled.span`
     color: ${({theme}) => theme.color.mainColor};
-    font-size: 32px;
+    font-size: 28px;
     font-weight: normal;
     font-style: italic;
     text-align: center;
 `;
 
 export const CustomSlider = styled(Slider)`
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
     width: 100%;
 `;

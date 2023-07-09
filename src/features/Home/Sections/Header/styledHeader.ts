@@ -13,7 +13,7 @@ export const Wrapper = styled.header`
 `;
 
 export const Title = styled.h1`
-    font-size: 64px;    
+    font-size: 60px;    
     font-style: italic;
     font-weight: 500;
     margin: 0;

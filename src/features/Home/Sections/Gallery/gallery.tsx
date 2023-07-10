@@ -18,6 +18,7 @@ export const Gallery = () => {
                 slidesPerView={3}
                 modules={[Navigation, Scrollbar, EffectCube, EffectCoverflow]}
                 spaceBetween={100}
+                loop={true}
                 navigation
                 coverflowEffect={{
                     rotate: 50,

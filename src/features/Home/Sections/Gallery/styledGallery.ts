@@ -58,5 +58,4 @@ export const Button = styled.button`
   color: ${({theme}) => theme.color.mainColor};
   padding: 10px;
   margin-right: 60px;
-  
 `;

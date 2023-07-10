@@ -21,7 +21,7 @@ export const OpinionWrapper = styled.div`
 `;
 
 export const ClientName = styled.div`
-    font-size: 40px;
+    font-size: 36px;
     color: ${({ theme }) => theme.color.secondColor};
     text-align: center;
     font-style: italic;
@@ -51,4 +51,5 @@ export const Opinion = styled.div`
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
+    font-weight: 100;
 `;

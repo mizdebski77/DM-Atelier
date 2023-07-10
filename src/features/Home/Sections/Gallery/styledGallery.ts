@@ -3,20 +3,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Wrapper = styled.section`
     background: ${({theme}) => theme.color.secondColor};
-    width: 100%;
     padding: 20px;
 `;
-
 
 export const Container = styled.div`
     max-width: 1700px;
     margin: 0 auto;
     background: ${({theme}) => theme.color.secondColor};
-    padding: 20px;
 `;
 
 export const Title = styled.h4`
-    font-size: 48px;
+    font-size: 40px;
     font-style: italic;
     font-weight: normal;
     text-align: center;
@@ -26,11 +23,13 @@ export const Title = styled.h4`
 `;
 
 export const CustomSwiper = styled(Swiper)`
-  width: 800px;
+  max-width: 1800px;
+  width: 100%;
+  padding: 40px;
 
-    .swiper-cube-shadow:before {
-      background: ${({theme}) => theme.color.mainColor};
-      filter: blur(90px);
+    .swiper-slide-active{
+      opacity: 1;
+      scale: 1.2;
     }
 
     .swiper-button-next {
@@ -45,8 +44,19 @@ export const CustomSwiper = styled(Swiper)`
 `;
 
 export const CustomSlider = styled(SwiperSlide)`
-
+  opacity: 0.3;
+  scale: 0.8;
 `;
 
 export const Image = styled.img`
-  width: 100%;`;  
+  width: 100%;
+`;
+
+export const Button = styled.button`
+  background: ${({theme}) => theme.color.secondColor};
+  border: 1px solid ${({theme}) => theme.color.mainColor};
+  color: ${({theme}) => theme.color.mainColor};
+  padding: 10px;
+  margin-right: 60px;
+  
+`;

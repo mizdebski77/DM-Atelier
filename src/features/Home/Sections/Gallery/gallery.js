@@ -14,19 +14,25 @@ export const Gallery = () => {
     <Wrapper>
       <Title> Galeria Zdjęć</Title>
       <CustomSwiper
-        effect={'cube'}
-        modules={[Navigation, Pagination, Scrollbar, EffectCube]}
-        spaceBetween={50}
-        slidesPerView={1}
+        effect={'coverflow'}
+        centeredSlides={true}
+        slidesPerView={3}
+        modules={[Navigation, Scrollbar, EffectCube, EffectCoverflow]}
+        spaceBetween={100}
         navigation
-        cubeEffect={{
-          shadow: true,
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
           slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
         }}
-        pagination={{ clickable: true }}
       >
+        <CustomSlider><Image src={ex} /></CustomSlider>
+        <CustomSlider><Image src={ex} /></CustomSlider>
+        <CustomSlider><Image src={ex} /></CustomSlider>
+        <CustomSlider><Image src={ex} /></CustomSlider>
+        <CustomSlider><Image src={ex} /></CustomSlider>
         <CustomSlider><Image src={ex} /></CustomSlider>
         <CustomSlider><Image src={ex} /></CustomSlider>
         <CustomSlider><Image src={ex} /></CustomSlider>

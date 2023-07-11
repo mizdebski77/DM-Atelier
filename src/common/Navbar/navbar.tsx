@@ -3,18 +3,31 @@ import { Links, LinksWrapper, Logo, LogoLink, PhoneNavbar, PhoneNavbarWrapper, W
 import logo from '../Images/DM Logo.png'
 import { Divide as Hamburger } from 'hamburger-react';
 import { links } from './Links';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const Navbar = () => {
 
-    const [phoneNavbar, setPhoneNavbar] = useState<Boolean>(false);
+    const [phoneNavbar, setPhoneNavbar] = useState<boolean>(false);
+    const [scrolledNavbar, setScrolledNavbar] = useState<boolean>(false);
 
     const openPhoneNavbar = () => {
         setPhoneNavbar(!phoneNavbar);
     };
+
+    const changedNavColor = () => {
+        if (window.scrollY > 50) {
+            setScrolledNavbar(true);
+        } else {
+            setScrolledNavbar(false)
+        }
+    };
+
+    window.addEventListener("scroll", changedNavColor);
+
+
     return (
         <>
-            <Wrapper>
+            <Wrapper scrolled={scrolledNavbar}>
                 <LogoLink to="/Strona-Główna"><Logo src={logo} alt='Logo' /> </LogoLink>
                 <LinksWrapper>
                     {links.map((link, index) => (

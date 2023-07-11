@@ -23,7 +23,6 @@ export const Header = () => {
             <Title>D'M Atelier <Paragraph>z miłości do barmaństwa</Paragraph> </Title>
             <CustomSlider {...settings}>
                 <Image src={ex1} />
-                <Image src={ex2} />
             </CustomSlider>
         </Wrapper>
     );

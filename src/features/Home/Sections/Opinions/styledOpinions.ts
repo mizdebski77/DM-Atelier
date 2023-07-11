@@ -6,6 +6,11 @@ export const Wrapper = styled.section`
     margin: 0 auto;
     min-height: 480px;
     padding: 20px;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        padding: 10px;
+        min-height: 340px;
+    };
 `;
 
 export const Title = styled.h3`
@@ -14,6 +19,11 @@ export const Title = styled.h3`
     margin: 20px;
     font-style: italic;
     font-weight: normal;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 24px;
+        margin: 0 0 20px;
+    };
 `;
 
 export const OpinionWrapper = styled.div`
@@ -26,6 +36,10 @@ export const ClientName = styled.div`
     text-align: center;
     font-style: italic;
     margin: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 20px;
+    };
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -33,12 +47,21 @@ export const CustomSlider = styled(Slider)`
     margin: 0 auto;
     padding: 20px;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        max-width: 320px;
+        padding: 0;
+    };
+
     .slick-dots {
         li {
             button:before {
                 color: ${({ theme }) => theme.color.secondColor};
                 font-size: 16px;
                 margin-top: 20px;
+
+                @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+                    font-size: 8px;
+                };
         }
     }
   }
@@ -52,4 +75,8 @@ export const Opinion = styled.div`
     text-align: center;
     margin: 0 auto;
     font-weight: 100;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 16px;
+    };
 `;

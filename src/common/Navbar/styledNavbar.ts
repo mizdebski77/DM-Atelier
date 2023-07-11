@@ -5,8 +5,8 @@ export const Wrapper = styled.nav <{scrolled: boolean}>`
     width: 100%;
     align-items: center;
     padding: 20px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     position: sticky;
     z-index: 10;
     top:0;
@@ -41,7 +41,7 @@ export const LinksWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     margin: 0 40px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){

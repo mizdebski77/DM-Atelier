@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactElement, ContactWrapper, FooterTitle, Image, Logo, SVGLink, SVGLinks, Wrapper } from './styledFooter';
+import { ContactElement, ContactWrapper, FooterTitle, Image, Logo, LogoLink, SVGLink, SVGLinks, Socials, Wrapper } from './styledFooter';
 import logo from '../Images/DM Logo.png';
 import insta from '../Images/Socials/instagra,.svg'
 import website from '../Images/Socials/webiste.svg'
@@ -17,9 +17,9 @@ export const Footer = () => {
 
     return (
         <Wrapper>
-            <Link to="./Strona-Główna" onClick={handleClick}>
+            <LogoLink to="./Strona-Główna" onClick={handleClick}>
                 <Logo src={logo} />
-            </Link>
+            </LogoLink>
             <ContactWrapper>
                 <FooterTitle>Kontakt:</FooterTitle>
                 <ContactElement>Adres: Legionów Polskich 34</ContactElement>
@@ -27,7 +27,7 @@ export const Footer = () => {
                 <ContactElement>Nip: 534645234</ContactElement>
             </ContactWrapper>
 
-            <div>
+            <Socials>
                 <FooterTitle> Znajdziesz nas na:</FooterTitle>
                 <SVGLinks>
                     <SVGLink><Image src={insta} /></SVGLink>
@@ -35,7 +35,7 @@ export const Footer = () => {
                     <SVGLink><Image src={mail} /></SVGLink>
                     <SVGLink><Image src={fb} /></SVGLink>
                 </SVGLinks>
-            </div>
+            </Socials>
         </Wrapper>
     );
 };

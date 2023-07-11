@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-     width: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -10,6 +10,12 @@ export const Wrapper = styled.header`
     max-width: 1700px;
     margin: 0 auto;
     padding: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+        gap: 20px;
+    };
 `;
 
 export const Title = styled.h1`
@@ -18,6 +24,14 @@ export const Title = styled.h1`
     font-weight: 500;
     margin: 0;
     text-align: center;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        font-size: 40px;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 28px;
+    };
 `;
 
 export const Paragraph = styled.p`
@@ -31,4 +45,8 @@ export const CustomSlider = styled(Slider)`
     max-width: 400px;
     margin: 0 auto;
     width: 100%;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        max-width: 200px;
+    };
 `;  

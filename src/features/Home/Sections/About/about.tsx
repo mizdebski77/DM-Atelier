@@ -27,7 +27,6 @@ export const About = () => {
 
                 <CustomSlider {...settings}>
                     <Image src={ex1} />
-                    <Image src={ex2} />
                 </CustomSlider>
             </Container>
 

@@ -24,7 +24,6 @@ export const Navbar = () => {
 
     window.addEventListener("scroll", changedNavColor);
 
-
     return (
         <>
             <Wrapper scrolled={scrolledNavbar}>

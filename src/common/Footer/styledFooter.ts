@@ -7,7 +7,7 @@ export const Wrapper = styled.footer`
     align-items:center;
     justify-content: space-between;
     padding: 80px;
-    min-height: 540px;
+    height: 480px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         display: grid;

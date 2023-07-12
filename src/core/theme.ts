@@ -2,7 +2,7 @@ export const theme = {
     color: {
         secondColor: "#080404",
         mainColor: "#f9f5f0",
-        thirdColor: "#808080",
+        thirdColor: "#A9A59F",
 
     },
 

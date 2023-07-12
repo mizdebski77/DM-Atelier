@@ -22,7 +22,7 @@ export const Opinions = () => {
             <Title>Opinie naszych klientów</Title>
             <CustomSlider {...settings}>
                 {opinions.map((opinion) => (
-                    <OpinionWrapper>
+                    <OpinionWrapper key={opinion.id}>
                         <ClientName>{opinion.name}</ClientName>
                         <Opinion>{opinion.contents}</Opinion>
                     </OpinionWrapper>

@@ -27,6 +27,10 @@ export const CustomSwiper = styled(Swiper)`
   width: 100%;
   padding: 40px;
 
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      max-width: 500px;
+  };
+
     .swiper-slide-active{
       opacity: 1;
       scale: 1.2;

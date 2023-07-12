@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, CustomSlider, Image, Text, Title, Wrapper } from './styledAbout';
 import ex1 from "../../../../common/Images/Example Images/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.png";
-import ex2 from '../../../../common/Images/Example Images/pngwing.com (1).png';
 
 export const About = () => {
 

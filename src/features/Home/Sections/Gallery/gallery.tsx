@@ -27,6 +27,14 @@ export const Gallery = () => {
                     modifier: 1,
                     slideShadows: true,
                 }}
+
+                breakpoints={{
+                    767: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    }
+                }}
+
             >
                 <CustomSlider><Image src={ex} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>

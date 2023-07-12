@@ -11,7 +11,7 @@ export const Wrapper = styled.header`
     margin: 0 auto;
     padding: 20px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         grid-template-columns: 1fr;
         padding: 20px 10px;
         gap: 20px;
@@ -46,7 +46,7 @@ export const CustomSlider = styled(Slider)`
     margin: 0 auto;
     width: 100%;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         max-width: 200px;
     };
 `;  

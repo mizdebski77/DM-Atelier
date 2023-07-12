@@ -12,7 +12,7 @@ export const Home = () => {
             <Header />
             <About />
             <Opinions/>
-            {/* <Gallery/> */}
+            <Gallery/>
         </Wrapper>
     );
 };

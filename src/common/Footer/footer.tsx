@@ -5,7 +5,6 @@ import insta from '../Images/Socials/instagra,.svg'
 import website from '../Images/Socials/webiste.svg'
 import mail from '../Images/Socials/mail.svg'
 import fb from '../Images/Socials/facebook.svg'
-import { Link } from 'react-router-dom';
 
 
 

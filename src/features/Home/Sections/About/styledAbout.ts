@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
     width: 100%;
     padding: 20px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         padding: 10px;
     };
 `;
@@ -20,7 +20,7 @@ export const Title = styled.h2`
     font-weight: 500;
     margin: 0;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         font-size: 24px;
         margin: 0 0 20px;
     };
@@ -33,7 +33,7 @@ export const Container = styled.div`
     max-width: 1700px;
     margin: 0 auto;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         grid-template-columns: 1fr;
         gap: 20px;
     };
@@ -56,7 +56,7 @@ export const CustomSlider = styled(Slider)`
     margin: 0 auto;
     width: 100%;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         max-width: 120px;
     };
 `;

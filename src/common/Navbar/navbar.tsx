@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Links, LinksWrapper, Logo, LogoLink, PhoneNavbar, PhoneNavbarWrapper, Wrapper } from './styledNavbar';
+import { Links, LinksWrapper, Logo, LogoLink, PhoneLinksWrapper, PhoneNavbar, PhoneNavbarWrapper, Wrapper } from './styledNavbar';
 import logo from '../Images/DM Logo.png'
 import { Divide as Hamburger } from 'hamburger-react';
 import { links } from './Links';
-import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 export const Navbar = () => {
 
@@ -15,7 +15,7 @@ export const Navbar = () => {
     };
 
     const changedNavColor = () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 10) {
             setScrolledNavbar(true);
         } else {
             setScrolledNavbar(false)
@@ -38,26 +38,36 @@ export const Navbar = () => {
                 </LinksWrapper>
 
                 <PhoneNavbar onClick={openPhoneNavbar}>
-                    <Hamburger color='#161616' size={34} />
+                    <Hamburger color='#161616' size={28} />
                 </PhoneNavbar>
 
 
             </Wrapper>
-            {phoneNavbar ? (
-                <motion.div
-                    initial={{ opacity: 0, x: -500 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <PhoneNavbarWrapper>
-                        {links.map((link, index) => (
-                            <Links key={index} to={link.link}>
-                                {link.text}
-                            </Links>
-                        ))}
+            <AnimatePresence>
+
+                {phoneNavbar ? (
+                    <PhoneNavbarWrapper
+                        initial={{ height: 0 }}
+                        animate={{
+                            height: 320
+                        }}
+                        exit={{
+                            height: 0,
+                            transition: { delay: 1, duration: 0.3 }
+                        }}
+                    >
+                        <PhoneLinksWrapper>
+                            {links.map((link, index) => (
+                                <Links key={index} to={link.link}>
+                                    {link.text}
+                                </Links>
+                            ))}
+                        </PhoneLinksWrapper>
+
                     </PhoneNavbarWrapper>
-                </motion.div>
-            ) : null}
+                ) : null}
+            </AnimatePresence>
+
 
 
         </>

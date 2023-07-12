@@ -42,9 +42,9 @@ export const CustomSwiper = styled(Swiper)`
   padding: 40px;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-      max-width: 300px;
+      max-width: 360px;
       padding: 10px;
-      margin: 20px;
+      margin: 0 auto 20px;
   };
 
     .swiper-slide-active{

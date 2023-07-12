@@ -5,6 +5,7 @@ declare module 'styled-components' {
         color: {
             mainColor: string;
             secondColor: string;
+            thirdColor: string;
         }
         breakPoint: {
             firstBreakPoint: number;

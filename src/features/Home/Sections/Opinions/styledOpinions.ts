@@ -39,6 +39,7 @@ export const ClientName = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         font-size: 20px;
+        margin: 10px;
     };
 `;
 

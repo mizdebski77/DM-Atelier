@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 import { NavLink, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled.nav <{scrolled: boolean}>`
+export const Wrapper = styled.nav <{ scrolled: boolean }>`
     width: 100%;
-    align-items: center;
-    padding: 20px 40px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 20px 40px;
     position: sticky;
     z-index: 10;
     top:0;
@@ -15,9 +16,9 @@ export const Wrapper = styled.nav <{scrolled: boolean}>`
         padding: 10px;
     };
 
-    ${({scrolled}) => scrolled && css`
-        border-bottom: 2px solid ${({theme}) => theme.color.secondColor};
-        background: ${({theme}) => theme.color.mainColor};
+    ${({ scrolled }) => scrolled && css`
+        background: ${({ theme }) => theme.color.mainColor};
+        border-bottom: 1px solid ${({ theme }) => theme.color.secondColor};
     `};
 `;
 
@@ -33,7 +34,7 @@ export const Logo = styled.img`
     width: 240px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        width: 200px;
+        width: 160px;
     };
 `;
 
@@ -44,11 +45,6 @@ export const LinksWrapper = styled.div`
     gap: 40px;
     margin: 0 40px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
-        gap: 20px;
-        margin: 0;
-    };
-        
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: none;
     }
@@ -64,27 +60,27 @@ export const Links = styled(NavLink)`
     border-radius: 20px;
     transition: 0.5s;
     text-underline-offset: 6px;
-    padding: 12px;
+    padding: 10px 12px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
-        color: ${({theme}) => theme.color.mainColor};
-        padding: 10px;
-        border-radius: 0;
-    }
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 16px;
+        padding: 16px;
+    };
 
     &:hover {
         transform: translateY(-5px);
         text-decoration: underline;
-    }
+    };
 
     &.${activeClassName} {
         background: ${({ theme }) => theme.color.secondColor};
-        padding: 10px;
         color: ${({ theme }) => theme.color.mainColor};
 
         @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
-            color: ${({theme}) => theme.color.mainColor};
-            border-bottom: 1px solid ${({theme}) => theme.color.mainColor};
+            color: ${({ theme }) => theme.color.mainColor};
+            background: transparent;
+            border-bottom: 1px solid ${({ theme }) => theme.color.mainColor};
+            border-radius: 0px;
          }
 
         &:hover {
@@ -106,17 +102,18 @@ export const PhoneNavbar = styled.div`
   }
 `;
 
-export const PhoneNavbarWrapper = styled.div`
-    background: ${({theme}) => theme.color.secondColor};
+export const PhoneNavbarWrapper = styled(motion.div)`
+    background: ${({ theme }) => theme.color.thirdColor};
     position: fixed;
-    display: grid;
-    gap: 20px;
     width: 100%;
-    padding: 20px;
+    z-index: 10;
 
     @media (min-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: none;
-  }
+    }
 `;
 
-
+export const PhoneLinksWrapper = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+`;

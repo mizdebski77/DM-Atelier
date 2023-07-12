@@ -2,8 +2,7 @@ import { CustomSlider, CustomSwiper, Image, Title, Wrapper } from "./styledGalle
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-cube';
-import { Navigation, EffectCoverflow, EffectCube, Scrollbar, } from 'swiper/modules';
+import { Navigation, EffectCoverflow, Scrollbar, } from 'swiper/modules';
 
 import ex from '../../../../common/Images/exx.jpg'
 
@@ -12,11 +11,19 @@ export const Gallery = () => {
     return (
         <Wrapper>
             <Title> Galeria Zdjęć</Title>
+
             <CustomSwiper<React.ComponentType<any>>
+
+                breakpoints={{
+                    768: {
+                        slidesPerView: 3,
+                    },
+                }}
+
                 effect={'coverflow'}
                 centeredSlides={true}
-                slidesPerView={3}
-                modules={[Navigation, Scrollbar, EffectCube, EffectCoverflow]}
+                slidesPerView={1}
+                modules={[Navigation, Scrollbar, EffectCoverflow]}
                 spaceBetween={100}
                 loop={true}
                 navigation
@@ -28,14 +35,9 @@ export const Gallery = () => {
                     slideShadows: true,
                 }}
 
-                breakpoints={{
-                    767: {
-                        slidesPerView: 1,
-                        spaceBetween: 20
-                    }
-                }}
 
             >
+
                 <CustomSlider><Image src={ex} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>

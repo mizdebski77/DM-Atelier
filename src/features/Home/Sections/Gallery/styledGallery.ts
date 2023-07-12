@@ -5,12 +5,21 @@ export const Wrapper = styled.section`
     background: ${({ theme }) => theme.color.secondColor};
     padding: 20px;
     min-height: 480px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      padding: 10px;
+      min-height: 200px;
+  };
 `;
 
 export const Container = styled.div`
     max-width: 1700px;
     margin: 0 auto;
     background: ${({ theme }) => theme.color.secondColor};
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      max-width: 500px;
+  };
 `;
 
 export const Title = styled.h4`
@@ -20,6 +29,11 @@ export const Title = styled.h4`
     text-align: center;
     margin: 20px 20px 40px;
     color: ${({ theme }) => theme.color.mainColor};
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      font-size: 24px;
+      margin: 0 0 20px;
+  };
 `;
 
 export const CustomSwiper = styled(Swiper)`
@@ -28,7 +42,9 @@ export const CustomSwiper = styled(Swiper)`
   padding: 40px;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-      max-width: 500px;
+      max-width: 300px;
+      padding: 10px;
+      margin: 20px;
   };
 
     .swiper-slide-active{

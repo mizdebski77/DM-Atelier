@@ -1,12 +1,26 @@
 {
   "files": {
-    "main.js": "/DM-Atelier/static/js/main.686d6e81.js",
+    "main.css": "/DM-Atelier/static/css/main.326282dc.css",
+    "main.js": "/DM-Atelier/static/js/main.6e8d28e4.js",
     "static/js/787.f934530b.chunk.js": "/DM-Atelier/static/js/787.f934530b.chunk.js",
+    "static/media/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.png": "/DM-Atelier/static/media/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.b17461986aa072aa60e7.png",
+    "static/media/exx.jpg": "/DM-Atelier/static/media/exx.87feaa50c174a9d7bef0.jpg",
+    "static/media/DM Logo.png": "/DM-Atelier/static/media/DM Logo.afb59f9a596d7114bff5.png",
+    "static/media/slick.svg": "/DM-Atelier/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/instagra,.svg": "/DM-Atelier/static/media/instagra,.ad45cb9475bd9b0306a51bf669d154c3.svg",
+    "static/media/slick.eot": "/DM-Atelier/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/DM-Atelier/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/DM-Atelier/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/DM-Atelier/index.html",
-    "main.686d6e81.js.map": "/DM-Atelier/static/js/main.686d6e81.js.map",
+    "static/media/facebook.svg": "/DM-Atelier/static/media/facebook.d8bb33ea43b7ff015997e0e2b987ad3d.svg",
+    "static/media/webiste.svg": "/DM-Atelier/static/media/webiste.b2e3a5216cd368c72625058424ecf7c2.svg",
+    "static/media/mail.svg": "/DM-Atelier/static/media/mail.22ba122390833bb358b5a16638465917.svg",
+    "main.326282dc.css.map": "/DM-Atelier/static/css/main.326282dc.css.map",
+    "main.6e8d28e4.js.map": "/DM-Atelier/static/js/main.6e8d28e4.js.map",
     "787.f934530b.chunk.js.map": "/DM-Atelier/static/js/787.f934530b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.686d6e81.js"
+    "static/css/main.326282dc.css",
+    "static/js/main.6e8d28e4.js"
   ]
 }

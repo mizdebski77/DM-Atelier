@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
     background: ${({theme}) => theme.color.secondColor};
     color: ${({theme}) => theme.color.mainColor};
     min-height: 100vh;
+    padding: 40px;
 `;
 
 export const PhotosSection = styled.div`
@@ -19,6 +20,7 @@ export const Image = styled.img<{smaller?: boolean}>`
     border-radius: 50%;
     width: 400px;
     height: 400px;
+    border: 2px solid wheat;
 
     ${({smaller}) => smaller && css`
         width: 320px;

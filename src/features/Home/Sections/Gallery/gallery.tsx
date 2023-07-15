@@ -34,8 +34,6 @@ export const Gallery = () => {
                     modifier: 1,
                     slideShadows: true,
                 }}
-
-
             >
 
                 <CustomSlider><Image src={ex} /></CustomSlider>

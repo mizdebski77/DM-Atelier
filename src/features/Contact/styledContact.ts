@@ -70,6 +70,13 @@ export const Button = styled.button`
     background: ${({theme}) => theme.color.secondColor};
     border-radius: 10px;
     float:right ;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px ${({theme}) => theme.color.secondColor};
+    }
 `;
 
 export const LinkContainer = styled.div`

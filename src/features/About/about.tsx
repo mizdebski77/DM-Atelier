@@ -28,9 +28,6 @@ export const About = () => {
             <TextSection>
                 <Title>Opinie naszych klientów</Title>
 
-<<<<<<< HEAD
-            </TextSection>
-=======
                 <CustomSwiper<React.ComponentType<any>>
                     effect={'coverflow'}
                     centeredSlides={true}
@@ -59,7 +56,6 @@ export const About = () => {
 
             </TextSection>
 
->>>>>>> features/about
         </Wrapper>
     );
 };

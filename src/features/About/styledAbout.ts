@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Wrapper = styled.section`
     background: ${({theme}) => theme.color.secondColor};
@@ -50,4 +51,12 @@ export const TextElement = styled.p`
     text-align: center;
     font-weight: normal;
     font-style: italic;
+`;
+
+export const CustomSwiper = styled(Swiper)`
+
+`;    
+
+export const CustomSlide = styled(SwiperSlide)`
+
 `;

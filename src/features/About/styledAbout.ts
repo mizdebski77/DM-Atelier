@@ -21,6 +21,7 @@ export const Image = styled.img<{ smaller?: boolean }>`
     border-radius: 50%;
     width: 400px;
     height: 400px;
+    box-shadow: 4px 4px 10px ${({theme}) => theme.color.mainColor};
 
     ${({ smaller }) => smaller && css`
         width: 320px;

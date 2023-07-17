@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import { Navigation, EffectCoverflow, Scrollbar, } from 'swiper/modules';
 
 import ex from '../../../../common/Images/exx.jpg'
+import ex2 from '../../../../common/Images/ex2.jpg'
 
 export const Gallery = () => {
 
@@ -39,15 +40,15 @@ export const Gallery = () => {
             >
 
                 <CustomSlider><Image src={ex} /></CustomSlider>
+                <CustomSlider><Image src={ex2} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>
+                <CustomSlider><Image src={ex2} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>
+                <CustomSlider><Image src={ex2} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>
+                <CustomSlider><Image src={ex2} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex} /></CustomSlider>
+                <CustomSlider><Image src={ex2} /></CustomSlider>
             </CustomSwiper>
         </Wrapper>
     );

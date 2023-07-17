@@ -3,6 +3,7 @@ import { Navbar } from "../common/Navbar/navbar";
 import { Home } from "../features/Home/home";
 import { Footer } from "../common/Footer/footer";
 import { About } from "../features/About/about";
+import { Contact } from "../features/Contact/contact";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/Strona-Główna" element={<Home />} />
         <Route path={"*"} element={<Home />} />
         <Route path="/O-Nas" element={<About />} />
-        <Route path="/Kontakt" element={<About />} />
+        <Route path="/Kontakt" element={<Contact />} />
 
       </Routes>
       <Footer />

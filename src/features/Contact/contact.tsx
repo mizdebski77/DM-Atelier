@@ -1,5 +1,9 @@
 import React from 'react';
-import { Button, ContactWrapper, Form, FormTitle, Input, InputWrapper, LinksTitle, LinksWrapper, SVGImage, Span, TextArea, TextField, Title, Wrapper } from './styledContact';
+import { Button, ContactWrapper, Form, FormTitle, Input, InputWrapper, LinkContainer, LinksTitle, LinksWrapper, SVGImage, Span, TextArea, TextField, Title, Wrapper } from './styledContact';
+import home from './Images/home.svg';
+import insta from './Images/instagram.svg';
+import phone from './Images/phone.svg';
+import mail from './Images/email.svg';
 
 export const Contact = () => {
     return (
@@ -22,23 +26,27 @@ export const Contact = () => {
                     <Button>Wyślij</Button>
                 </Form>
 
-                <LinksWrapper>
+                <LinkContainer>
                     <LinksTitle>D'M Atelier</LinksTitle>
-                    <TextField>
-                        <SVGImage />
-                        Legionów Polskich
-                    </TextField>
 
-                    <TextField>
-                        <SVGImage />
-                        Legionów Polskich
-                    </TextField>
+                    <LinksWrapper>
+                        <TextField>
+                            <SVGImage src={home} />  Olkusz Legionów Polskich
+                        </TextField>
 
-                    <TextField>
-                        <SVGImage />
-                        Legionów Polskich
-                    </TextField>
-                </LinksWrapper>
+                        <TextField>
+                            <SVGImage src={mail} /> mizdebski123@gmail.com
+                        </TextField>
+
+                        <TextField>
+                            <SVGImage src={phone} /> 501375604
+                        </TextField>
+
+                        <TextField>
+                            <SVGImage src={insta} /> D'M Atelier
+                        </TextField>
+                    </LinksWrapper>
+                </LinkContainer>
             </ContactWrapper>
         </Wrapper>
     );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import SVG from "react-inlinesvg";
 
 export const Wrapper = styled.section`
-    min-height: 100vh;
     max-width: 1500px;
     margin: 0 auto;
     padding: 40px;
@@ -21,8 +21,9 @@ export const Span = styled.h2`
 `;
 
 export const ContactWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     margin-top: 80px;
 `;
 
@@ -71,8 +72,13 @@ export const Button = styled.button`
     float:right ;
 `;
 
-export const LinksWrapper = styled.div`
+export const LinkContainer = styled.div`
 
+`;
+
+export const LinksWrapper = styled.div`
+    display: grid;
+    gap: 20px;
 `;
 
 export const LinksTitle = styled.h4`
@@ -80,12 +86,19 @@ export const LinksTitle = styled.h4`
     font-size: 36px;
     font-weight: normal;
     font-style: italic;
+    
 `;
 
 export const TextField = styled.div`
     border-bottom: 2px solid ${({theme}) => theme.color.secondColor};
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+    font-size: 20px;
 `;
 
-export const SVGImage = styled.svg`
-
+export const SVGImage = styled(SVG)`
+    width: 40px;
+    height: 40px;
 `;

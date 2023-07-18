@@ -5,7 +5,8 @@ import ex2 from '../../common/Images/3.jpg';
 import ex3 from '../../common/Images/4.jpg';
 import ex4 from '../../common/Images/ex3.jpg';
 import { AiOutlineClose } from 'react-icons/ai'
-import { closeWrapper, closeImage,  openImage, openWrapper } from './animations';
+import { closeWrapper, openImage } from './animations';
+import Swiper from 'swiper';
 
 
 export const Gallery = () => {
@@ -126,19 +127,20 @@ export const Gallery = () => {
                     ))}
                 </GalleryWrapper>
             </Wrapper>
-            
-            <FullScreenWrapper fullScreenPhoto={fullScreen}
-                initial={closeWrapper}
-                animate={fullScreen ? openWrapper : closeWrapper}
-                transition={{ duration: 0.5 }}               >
-                <CloseButton onClick={closeFullScreen}> <AiOutlineClose size={35} /> </CloseButton>
-                <ImageWrapper
-                  >
 
+            <FullScreenWrapper
+                fullScreenPhoto={fullScreen}
+                initial={closeWrapper}
+                transition={{ duration: 0.5 }}
+            >
+                <CloseButton
+                    onClick={closeFullScreen}>
+                    <AiOutlineClose size={35} />
+                </CloseButton>
+                <ImageWrapper>
                     <FullScreenImage
                         src={fullScreenSrc}
                         initial={openImage}
-                        animate={fullScreen ? openImage : closeImage}
                         transition={{ duration: 0.5 }}
                     />
                 </ImageWrapper>

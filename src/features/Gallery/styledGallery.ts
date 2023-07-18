@@ -82,8 +82,5 @@ export const ImageWrapper = styled(motion.div)`
 export const FullScreenImage = styled(motion.img)`
     max-height: 100%;
     max-width: 100%;
-  
-    user-select: none;
-
-
+      user-select: none;
 `;

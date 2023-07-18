@@ -4,6 +4,7 @@ import { Home } from "../features/Home/home";
 import { Footer } from "../common/Footer/footer";
 import { About } from "../features/About/about";
 import { Contact } from "../features/Contact/contact";
+import { Gallery } from "../features/Gallery/gallery";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path={"*"} element={<Home />} />
         <Route path="/O-Nas" element={<About />} />
         <Route path="/Kontakt" element={<Contact />} />
+        <Route path="/Galeria" element={<Gallery />} />
 
       </Routes>
       <Footer />

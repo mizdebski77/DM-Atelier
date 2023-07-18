@@ -43,8 +43,35 @@ export const Image = styled.img`
 
     :hover {
         transform: scale(1.04);
-
     }
+`;
+
+export const FullScreenWrapper = styled.section<{ fullScreenPhoto: boolean }>`
+    display: ${({ fullScreenPhoto }) => (fullScreenPhoto ? 'block' : 'none')};
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  cursor: pointer;
+`;
+
+
+export const FullScreenImage = styled.img`
+    max-height: 100%;
+    max-width: 100%;
+  
+    user-select: none;
 
 
 `;

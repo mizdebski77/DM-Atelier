@@ -1,5 +1,5 @@
-import React from 'react';
-import { GalleryWrapper, Image, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
+import React, { useState } from 'react';
+import { FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, ImageWrapper, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
 import ex1 from '../../common/Images/ex1.jpg';
 import ex2 from '../../common/Images/3.jpg';
 import ex3 from '../../common/Images/4.jpg';
@@ -7,6 +7,10 @@ import ex4 from '../../common/Images/ex3.jpg';
 
 
 export const Gallery = () => {
+
+    const [fullScreen, setFullScreen] = useState<boolean>(false);
+    const [fullScreenSrc, setFullScreenSrc] = useState<string>("");
+    const [currentPhotoIndex, setCurrentPhotoIndex] = useState<number>(0);
 
     const data = [
         {
@@ -93,22 +97,43 @@ export const Gallery = () => {
             id: 13,
             imgsrc: ex2,
         },
-    ]
+    ];
+
+    const openFullScreen = (src: string, index: number) => {
+        setFullScreenSrc(src);
+        setCurrentPhotoIndex(index);
+        setFullScreen(true);
+    }
+
+    const closeFullScreen = () => {
+        setFullScreen(false)
+    };
 
     return (
-        <Wrapper>
-            <MainWrapper>
-                <Title>Galeria zdjęć</Title>
-            </MainWrapper>
+        <>
 
-            <GalleryWrapper>
-                {data.map((img) => (
-                    <Pics key={img.id}>
-                        <Image src={img.imgsrc} />
-                    </Pics>
-                ))}
-            </GalleryWrapper>
-        </Wrapper>
+            <Wrapper>
+                <MainWrapper>
+                    <Title>Galeria zdjęć</Title>
+                </MainWrapper>
+
+                <GalleryWrapper>
+                    {data.map((img) => (
+                        <Pics key={img.id}>
+                            <Image src={img.imgsrc} onClick={() => openFullScreen(img.imgsrc, img.id)}
+                            />
+                        </Pics>
+                    ))}
+                </GalleryWrapper>
+            </Wrapper>
+
+            <FullScreenWrapper fullScreenPhoto={fullScreen} >
+                <ImageWrapper>
+                    <FullScreenImage src={fullScreenSrc} />
+                </ImageWrapper>
+            </FullScreenWrapper>
+
+        </>
     );
 };
 

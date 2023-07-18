@@ -6,7 +6,6 @@ import ex3 from '../../common/Images/4.jpg';
 import ex4 from '../../common/Images/ex3.jpg';
 import { AiOutlineClose } from 'react-icons/ai'
 import { closeWrapper, closeImage,  openImage, openWrapper } from './animations';
-import { AnimatePresence } from 'framer-motion';
 
 
 export const Gallery = () => {

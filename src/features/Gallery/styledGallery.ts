@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from './Images/background.png'
+import { motion } from "framer-motion";
 
 export const Wrapper = styled.section`
     min-height: 100vh;
@@ -46,7 +47,7 @@ export const Image = styled.img`
     }
 `;
 
-export const FullScreenWrapper = styled.section<{ fullScreenPhoto: boolean }>`
+export const FullScreenWrapper = styled(motion.section)<{ fullScreenPhoto: boolean }>`
     display: ${({ fullScreenPhoto }) => (fullScreenPhoto ? 'block' : 'none')};
     position: fixed;
     z-index: 10;
@@ -54,20 +55,31 @@ export const FullScreenWrapper = styled.section<{ fullScreenPhoto: boolean }>`
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
 `;
 
-export const ImageWrapper = styled.div`
+export const CloseButton = styled.span`
+  position: absolute;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  right: 80px;
+
+  :hover {
+    transform: scale(1.2);
+  }
+`;
+
+export const ImageWrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   width: calc(100% - 40px);
   height: calc(100% - 40px);
-  cursor: pointer;
 `;
 
 
-export const FullScreenImage = styled.img`
+export const FullScreenImage = styled(motion.img)`
     max-height: 100%;
     max-width: 100%;
   

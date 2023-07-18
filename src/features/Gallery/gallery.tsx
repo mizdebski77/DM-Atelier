@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, ImageWrapper, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
+import { CloseButton, FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, ImageWrapper, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
 import ex1 from '../../common/Images/ex1.jpg';
 import ex2 from '../../common/Images/3.jpg';
 import ex3 from '../../common/Images/4.jpg';
 import ex4 from '../../common/Images/ex3.jpg';
+import { AiOutlineClose } from 'react-icons/ai'
+import { closeWrapper, closeImage,  openImage, openWrapper } from './animations';
+import { AnimatePresence } from 'framer-motion';
 
 
 export const Gallery = () => {
 
     const [fullScreen, setFullScreen] = useState<boolean>(false);
     const [fullScreenSrc, setFullScreenSrc] = useState<string>("");
-    const [currentPhotoIndex, setCurrentPhotoIndex] = useState<number>(0);
 
     const data = [
         {
@@ -101,7 +103,6 @@ export const Gallery = () => {
 
     const openFullScreen = (src: string, index: number) => {
         setFullScreenSrc(src);
-        setCurrentPhotoIndex(index);
         setFullScreen(true);
     }
 
@@ -126,13 +127,23 @@ export const Gallery = () => {
                     ))}
                 </GalleryWrapper>
             </Wrapper>
+            
+            <FullScreenWrapper fullScreenPhoto={fullScreen}
+                initial={closeWrapper}
+                animate={fullScreen ? openWrapper : closeWrapper}
+                transition={{ duration: 0.5 }}               >
+                <CloseButton onClick={closeFullScreen}> <AiOutlineClose size={35} /> </CloseButton>
+                <ImageWrapper
+                  >
 
-            <FullScreenWrapper fullScreenPhoto={fullScreen} >
-                <ImageWrapper>
-                    <FullScreenImage src={fullScreenSrc} />
+                    <FullScreenImage
+                        src={fullScreenSrc}
+                        initial={openImage}
+                        animate={fullScreen ? openImage : closeImage}
+                        transition={{ duration: 0.5 }}
+                    />
                 </ImageWrapper>
             </FullScreenWrapper>
-
         </>
     );
 };

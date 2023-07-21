@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import background from './Images/background.png'
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Wrapper = styled.section`
     min-height: 100vh;
@@ -58,12 +59,16 @@ export const FullScreenWrapper = styled(motion.section)<{ fullScreenPhoto: boole
     padding: 40px;
 `;
 
-export const CloseButton = styled.span`
-  position: absolute;
+export const CloseButton = styled.button`
+  position: fixed;
+  z-index: 1;
+  top: 20px;
   color: white;
   transition: 0.3s;
   cursor: pointer;
   right: 80px;
+  background: transparent;
+  border: none;
 
   :hover {
     transform: scale(1.2);
@@ -78,9 +83,21 @@ export const ImageWrapper = styled(motion.div)`
   height: calc(100% - 40px);
 `;
 
-
 export const FullScreenImage = styled(motion.img)`
     max-height: 100%;
     max-width: 100%;
-      user-select: none;
+    user-select: none;
+`;
+
+export const CustomSwiper = styled(Swiper)<{ fullScreenPhoto: boolean }>`
+    width: 100%;
+    height: 100%;
+`;
+
+export const CustomSlide = styled(SwiperSlide)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
 `;

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { CloseButton, FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, ImageWrapper, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
+import { CloseButton, CustomSlide, CustomSwiper, FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, ImageWrapper, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
 import ex1 from '../../common/Images/ex1.jpg';
 import ex2 from '../../common/Images/3.jpg';
 import ex3 from '../../common/Images/4.jpg';
 import ex4 from '../../common/Images/ex3.jpg';
 import { AiOutlineClose } from 'react-icons/ai'
 import { closeImage, closeWrapper, openImage, openWrapper } from './animations';
-
-
+import { Navigation } from 'swiper/modules'
 export const Gallery = () => {
 
     const [fullScreen, setFullScreen] = useState<boolean>(false);
@@ -133,20 +132,32 @@ export const Gallery = () => {
                 animate={fullScreen ? openWrapper : closeWrapper}
                 transition={{ duration: 0.5 }}
             >
+
+
+                <CustomSwiper<React.ComponentType<any>>
+                    centeredSlides={true}
+                    slidesPerView={1}
+                    modules={[Navigation]}
+                    spaceBetween={100}
+                    loop={false}
+                    navigation
+                >
+
+                    {data.map((img, index) => (
+                        <CustomSlide key={img.id}>
+                            <FullScreenImage
+                                initial={openImage}
+                                animate={fullScreen ? openImage : closeImage}
+                                transition={{ duration: 0.5 }} src={img.imgsrc} />
+                        </CustomSlide>
+                    ))}
+                </CustomSwiper>
                 <CloseButton
                     onClick={closeFullScreen}>
                     <AiOutlineClose size={35} />
                 </CloseButton>
-                <ImageWrapper>
-                    <FullScreenImage
-                        src={fullScreenSrc}
-                        initial={openImage}
-                        animate={fullScreen ? openImage : closeImage}
-                        transition={{ duration: 0.5 }}
-                    />
-                </ImageWrapper>
-            </FullScreenWrapper>
+
+            </FullScreenWrapper >
         </>
     );
 };
-

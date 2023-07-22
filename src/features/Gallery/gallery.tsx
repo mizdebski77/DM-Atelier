@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CloseButton, CustomSlide, CustomSwiper, FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, ImageWrapper, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
+import { CloseButton, CustomSlide, CustomSwiper, FullScreenImage, FullScreenWrapper, GalleryWrapper, Image, MainWrapper, Pics, Title, Wrapper } from './styledGallery';
 import ex1 from '../../common/Images/ex1.jpg';
 import ex2 from '../../common/Images/3.jpg';
 import ex3 from '../../common/Images/4.jpg';
@@ -72,41 +72,44 @@ export const Gallery = () => {
             imgsrc: ex2,
         },
         {
-            id: 8,
+            id: 14,
             imgsrc: ex1,
         },
         {
-            id: 9,
+            id: 15,
             imgsrc: ex2,
         },
         {
-            id: 10,
+            id: 16,
             imgsrc: ex1,
         },
 
         {
-            id: 11,
+            id: 17,
             imgsrc: ex3,
         },
         {
-            id: 12,
+            id: 18,
             imgsrc: ex4,
         },
 
         {
-            id: 13,
+            id: 19,
             imgsrc: ex2,
         },
     ];
 
-    const openFullScreen = (src: string, index: number) => {
+
+    const openFullScreen = (src: string) => {
         setFullScreenSrc(src);
         setFullScreen(true);
-    }
+    };
 
     const closeFullScreen = () => {
-        setFullScreen(false)
+        setFullScreen(false);
+        setFullScreenSrc("");
     };
+
 
     return (
         <>
@@ -119,45 +122,51 @@ export const Gallery = () => {
                 <GalleryWrapper>
                     {data.map((img) => (
                         <Pics key={img.id}>
-                            <Image src={img.imgsrc} onClick={() => openFullScreen(img.imgsrc, img.id)}
-                            />
+                            <Image src={img.imgsrc} onClick={() => openFullScreen(img.imgsrc)} />
                         </Pics>
                     ))}
                 </GalleryWrapper>
             </Wrapper>
 
-            <FullScreenWrapper
-                fullScreenPhoto={fullScreen}
-                initial={closeWrapper}
-                animate={fullScreen ? openWrapper : closeWrapper}
-                transition={{ duration: 0.5 }}
-            >
 
-
-                <CustomSwiper<React.ComponentType<any>>
-                    centeredSlides={true}
-                    slidesPerView={1}
-                    modules={[Navigation]}
-                    spaceBetween={100}
-                    loop={false}
-                    navigation
+            {fullScreenSrc && (
+                <FullScreenWrapper
+                    fullScreenPhoto={fullScreen}
+                    initial={closeWrapper}
+                    animate={fullScreen ? openWrapper : closeWrapper}
+                    transition={{ duration: 0.5 }}
                 >
 
-                    {data.map((img, index) => (
-                        <CustomSlide key={img.id}>
-                            <FullScreenImage
-                                initial={openImage}
-                                animate={fullScreen ? openImage : closeImage}
-                                transition={{ duration: 0.5 }} src={img.imgsrc} />
-                        </CustomSlide>
-                    ))}
-                </CustomSwiper>
-                <CloseButton
-                    onClick={closeFullScreen}>
-                    <AiOutlineClose size={35} />
-                </CloseButton>
 
-            </FullScreenWrapper >
+                    <CustomSwiper<React.ComponentType<any>>
+                        centeredSlides={true}
+                        slidesPerView={1}
+                        modules={[Navigation]}
+                        spaceBetween={100}
+                        loop={false}
+                        navigation
+                        grabCursor={true}
+                        initialSlide={data.findIndex((img) => img.imgsrc === fullScreenSrc)}
+                    >
+
+                        {data.map((img) => (
+                            <CustomSlide key={img.id}>
+                                <FullScreenImage
+                                    initial={closeImage}
+                                    animate={fullScreen ? openImage : closeImage}
+                                    transition={{ duration: 0.5 }}
+                                    src={img.imgsrc}
+                                />
+                            </CustomSlide>
+                        ))}
+                    </CustomSwiper>
+                    <CloseButton
+                        onClick={() => closeFullScreen()}>
+                        <AiOutlineClose size={35} />
+                    </CloseButton>
+
+                </FullScreenWrapper >)}
+
         </>
     );
 };

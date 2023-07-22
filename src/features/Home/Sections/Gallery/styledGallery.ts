@@ -50,7 +50,7 @@ export const CustomSwiper = styled(Swiper)`
     .swiper-slide-active{
       opacity: 1;
       scale: 1.2;
-      box-shadow: 8px -8px 8px ${({theme}) => theme.color.mainColor};
+      box-shadow: 2px -2px 10px ${({theme}) => theme.color.mainColor};
     }
 
     .swiper-button-next {

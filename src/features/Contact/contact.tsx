@@ -17,23 +17,25 @@ export const Contact = () => {
         message.error('Email has not been sent. Try again!');
     };
 
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null);
 
-    const sendEmail = (event) => {
+    const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        const formElement = event.target as HTMLFormElement;
 
-        emailjs.sendForm('service_lodf2in', 'template_6m3y1n9', form.current, 'umY-NBviFIQJGm59n',).then((result) => {
-
-            if (result.text === "OK") {
-                event.target.reset();
-                handleSendEmailSuccess();
-            }
-        }, () => {
-            handleSendEmailError();
-        });
+        emailjs.sendForm('service_lodf2in', 'template_6m3y1n9', formElement, 'umY-NBviFIQJGm59n')
+            .then((result) => {
+                if (result.text === "OK") {
+                    formElement.reset();
+                    handleSendEmailSuccess();
+                }
+            })
+            .catch(() => {
+                handleSendEmailError();
+            });
     };
 
-      
+
 
 
     return (
@@ -49,10 +51,10 @@ export const Contact = () => {
                         <Input type='surname' name="surname" placeholder='Nazwisko' required />
                         <Input type='email' name="email" placeholder='E-Mail' required />
                         <Input type='number' name="number" placeholder='Telefon' />
-                        <Input type='location' name = "location" placeholder='Lokalizacja' />
+                        <Input type='location' name="location" placeholder='Lokalizacja' />
 
-                        <Select name = "type" required >
-                        <Option value="" disabled selected hidden>Rodzaj imprezy</Option>
+                        <Select name="type" required >
+                            <Option value="" disabled selected hidden>Rodzaj imprezy</Option>
 
                             <Option value="Urodziny" >Urodziny</Option>
                             <Option value="Wesele">Wesele</Option>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Button, ContactWrapper, Form, FormTitle, Input, InputWrapper, LinkContainer, LinksTitle, LinksWrapper, Option, SVGImage, Select, Span, TextArea, TextField, Title, Wrapper } from './styledContact';
 import home from './Images/home.svg';
 import insta from './Images/instagram.svg';

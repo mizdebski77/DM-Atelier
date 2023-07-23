@@ -30,7 +30,7 @@ export const Navbar = () => {
                 <LogoLink to="/Strona-Główna"><Logo src={logo} alt='Logo' /> </LogoLink>
                 <LinksWrapper>
                     {links.map((link, index) => (
-                        <Links key={index} to={link.link}>
+                        <Links key={index} to={link.link} onClick={() => window.scrollTo(0, 0)}>
                             {link.text}
                         </Links>
                     ))}
@@ -57,7 +57,8 @@ export const Navbar = () => {
                     >
                         <PhoneLinksWrapper>
                             {links.map((link, index) => (
-                                <Links key={index} to={link.link}>
+                                <Links key={index} to={link.link} onClick={() => window.scrollTo(0, 0)}
+                                >
                                     {link.text}
                                 </Links>
                             ))}

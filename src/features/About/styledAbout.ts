@@ -21,11 +21,7 @@ export const Image = styled.img<{ smaller?: boolean }>`
     border-radius: 50%;
     width: 400px;
     height: 400px;
-<<<<<<< HEAD
     border: 2px solid wheat;
-=======
-    box-shadow: 4px 4px 10px ${({theme}) => theme.color.mainColor};
->>>>>>> features/about
 
     ${({ smaller }) => smaller && css`
         width: 320px;

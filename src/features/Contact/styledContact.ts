@@ -27,7 +27,7 @@ export const ContactWrapper = styled.div`
     margin-top: 80px;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
     max-width: 700px;
     width: 100%;
 `;
@@ -49,6 +49,17 @@ export const Input = styled.input`
     border: none;
     padding: 10px;
     border-bottom: 2px solid ${({theme}) => theme.color.secondColor};
+`;
+
+export const Select = styled.select`
+    background: transparent;
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid ${({theme}) => theme.color.secondColor};
+`;
+
+export const Option = styled.option`
+    
 `;
 
 export const TextArea = styled.textarea`

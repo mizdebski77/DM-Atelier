@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/DM-Atelier/static/js/main.d3505cc8.js",
+    "main.js": "/DM-Atelier/static/js/main.31c7cacf.js",
     "static/js/787.f934530b.chunk.js": "/DM-Atelier/static/js/787.f934530b.chunk.js",
     "static/media/image.png": "/DM-Atelier/static/media/image.6b2218a778328c17bbd6.png",
     "index.html": "/DM-Atelier/index.html",
-    "main.d3505cc8.js.map": "/DM-Atelier/static/js/main.d3505cc8.js.map",
+    "main.31c7cacf.js.map": "/DM-Atelier/static/js/main.31c7cacf.js.map",
     "787.f934530b.chunk.js.map": "/DM-Atelier/static/js/787.f934530b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d3505cc8.js"
+    "static/js/main.31c7cacf.js"
   ]
 }

@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import styled from "styled-components";
 
-export const Wrapper = styled.header`
+export const Wrapper = styled(motion.header)`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;

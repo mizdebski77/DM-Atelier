@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Wrapper = styled(motion.section)`
     background: ${({theme}) => theme.color.secondColor};
     width: 100%;
     padding: 20px;
@@ -26,7 +27,7 @@ export const Title = styled.h2`
     };
 `;
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

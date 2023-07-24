@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, CustomSlider, Image, Text, Title, Wrapper } from './styledAbout';
 import ex1 from "../../../../common/Images/Example Images/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.png";
-import { sectionAnimation } from '../../../../core/animations';
 import { useInViewAnimation } from '../../../../core/useInViewAnimation';
 
 export const About = () => {
@@ -21,12 +20,7 @@ export const About = () => {
     };
 
     return (
-        <Wrapper
-            ref={ref}
-            variants={sectionAnimation}
-            initial="hidden"
-            animate={animation}
-        >
+        <Wrapper>
             <Title>Czym się zajmujemy?</Title>
             <Container>
 

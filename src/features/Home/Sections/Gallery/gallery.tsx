@@ -7,18 +7,12 @@ import { Navigation, EffectCoverflow, Scrollbar, } from 'swiper/modules';
 import ex from '../../../../common/Images/exx.jpg'
 import ex2 from '../../../../common/Images/ex2.jpg'
 import { useInViewAnimation } from "../../../../core/useInViewAnimation";
-import { sectionAnimation } from "../../../../core/animations";
 
 export const Gallery = () => {
     const { animation, ref } = useInViewAnimation(0.5);
 
     return (
-        <Wrapper
-
-            ref={ref}
-            variants={sectionAnimation}
-            initial="hidden"
-            animate={animation}>
+        <Wrapper>
             <Title> Galeria Zdjęć</Title>
 
             <CustomSwiper<React.ComponentType<any>>

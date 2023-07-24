@@ -3,7 +3,8 @@ import React from 'react';
 import { CustomSlider, Image, Paragraph, Title, Wrapper } from './styledHeader';
 import ex1 from "../../../../common/Images/Example Images/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.png";
 import { useInViewAnimation } from '../../../../core/useInViewAnimation';
-import { sectionAnimation } from '../../../../core/animations';
+import { motion } from 'framer-motion';
+import { leftAnimation, opacityAnimation } from '../../../../core/animations';
 
 export const Header = () => {
 
@@ -22,16 +23,25 @@ export const Header = () => {
         arrows: false,
     };
 
+
     return (
-        <Wrapper
-            ref={ref}
-            variants={sectionAnimation}
-            initial="hidden"
-            animate={animation}
-        >
-            <Title>D'M Atelier <Paragraph>z miłości do barmaństwa</Paragraph> </Title>
+        <Wrapper>
+            <Title
+                as={motion.h1}
+                ref={ref}
+                variants={leftAnimation}
+                initial="hidden"
+                animate={animation}
+
+            >D'M Atelier <Paragraph>z miłości do barmaństwa</Paragraph> </Title>
             <CustomSlider {...settings}>
-                <Image src={ex1} />
+                <Image src={ex1}
+                    as={motion.img}
+                    ref={ref}
+                    variants={opacityAnimation}
+                    initial="hidden"
+                    animate={animation}
+                />
             </CustomSlider>
         </Wrapper>
     );

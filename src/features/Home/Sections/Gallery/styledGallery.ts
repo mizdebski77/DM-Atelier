@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export const Wrapper = styled(motion.section)`
+export const Wrapper = styled.section`
     background: ${({ theme }) => theme.color.secondColor};
     padding: 20px;
     min-height: 480px;

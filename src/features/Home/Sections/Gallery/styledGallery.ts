@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 

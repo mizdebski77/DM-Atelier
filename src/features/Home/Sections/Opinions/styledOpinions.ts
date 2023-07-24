@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import styled from "styled-components";
 
-export const Wrapper = styled(motion.section)`
+export const Wrapper = styled.section`
     max-width: 1700px;
     margin: 0 auto;
     min-height: 480px;

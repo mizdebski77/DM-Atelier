@@ -4,6 +4,8 @@ import { opinions } from './clitentsOpinions';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useInViewAnimation } from '../../../../core/useInViewAnimation';
+import { motion } from 'framer-motion';
+import { sectionAnimation } from '../../../../core/animations';
 
 export const Opinions = () => {
 
@@ -21,8 +23,14 @@ export const Opinions = () => {
 
 
     return (
-        <Wrapper>
-            
+        <Wrapper
+            as={motion.section}
+            ref={ref}
+            variants={sectionAnimation}
+            initial="hidden"
+            animate={animation}
+        >
+
             <Title>Opinie naszych klientów</Title>
             <CustomSlider {...settings}>
                 {opinions.map((opinion) => (

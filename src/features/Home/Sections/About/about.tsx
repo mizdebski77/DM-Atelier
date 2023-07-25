@@ -47,7 +47,9 @@ export const About = () => {
                         variants={opacityAnimation}
                         initial="hidden"
                         animate={animation}
-                        src={ex1} />
+                        src={ex1} 
+                        alt = "About Image"
+                        />
                 </CustomSlider>
             </Container>
 

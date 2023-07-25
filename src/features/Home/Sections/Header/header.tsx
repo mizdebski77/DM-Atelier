@@ -35,12 +35,14 @@ export const Header = () => {
 
             >D'M Atelier <Paragraph>z miłości do barmaństwa</Paragraph> </Title>
             <CustomSlider {...settings}>
-                <Image src={ex1}
+                <Image
+                    src={ex1}
                     as={motion.img}
                     ref={ref}
                     variants={opacityAnimation}
                     initial="hidden"
                     animate={animation}
+                    alt='Header Image'
                 />
             </CustomSlider>
         </Wrapper>

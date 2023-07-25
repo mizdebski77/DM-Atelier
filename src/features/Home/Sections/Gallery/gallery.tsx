@@ -47,10 +47,10 @@ export const Gallery = () => {
             >
 
 
-                <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex2} /></CustomSlider>
-                <CustomSlider><Image src={ex} /></CustomSlider>
-                <CustomSlider><Image src={ex2} /></CustomSlider>
+                <CustomSlider><Image alt="Image Gallery 1" src={ex} /></CustomSlider>
+                <CustomSlider><Image alt="Image Gallery 2" src={ex2} /></CustomSlider>
+                <CustomSlider><Image alt="Image Gallery 3" src={ex} /></CustomSlider>
+                <CustomSlider><Image alt="Image Gallery 4" src={ex2} /></CustomSlider>
 
             </CustomSwiper>
         </Wrapper>

@@ -22,7 +22,6 @@ export const Gallery = () => {
             animate={animation}
         >
             <Title> Galeria Zdjęć</Title>
-
             <CustomSwiper<React.ComponentType<any>>
 
                 breakpoints={{
@@ -47,11 +46,14 @@ export const Gallery = () => {
                 }}
             >
 
+
                 <CustomSlider><Image src={ex} /></CustomSlider>
                 <CustomSlider><Image src={ex2} /></CustomSlider>
                 <CustomSlider><Image src={ex} /></CustomSlider>
                 <CustomSlider><Image src={ex2} /></CustomSlider>
+
             </CustomSwiper>
         </Wrapper>
     );
 }
+

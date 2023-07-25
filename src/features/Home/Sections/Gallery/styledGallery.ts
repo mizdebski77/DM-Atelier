@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export const Wrapper = styled.section`
     background: ${({ theme }) => theme.color.secondColor};
     padding: 20px;
-    min-height: 480px;
+    min-height: 580px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
       padding: 10px;
@@ -46,6 +46,7 @@ export const CustomSwiper = styled(Swiper)`
       padding: 10px;
       margin: 0 auto 20px;
   };
+
 
     .swiper-slide-active{
       opacity: 1;

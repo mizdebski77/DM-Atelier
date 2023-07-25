@@ -5,8 +5,8 @@ import ex2 from '../../common/Images/3.jpg';
 import ex3 from '../../common/Images/4.jpg';
 import ex4 from '../../common/Images/ex3.jpg';
 import { AiOutlineClose } from 'react-icons/ai'
-import { closeImage, closeWrapper, openImage, openWrapper } from './animations';
 import { Navigation } from 'swiper/modules'
+import { closeImage, closeWrapper, openImage, openWrapper } from '../../core/animations';
 export const Gallery = () => {
 
     const [fullScreen, setFullScreen] = useState<boolean>(false);
@@ -119,7 +119,9 @@ export const Gallery = () => {
                     <Title>Galeria zdjęć</Title>
                 </MainWrapper>
 
-                <GalleryWrapper>
+                <GalleryWrapper
+                    
+                >
                     {data.map((img) => (
                         <Pics key={img.id}>
                             <Image src={img.imgsrc} onClick={() => openFullScreen(img.imgsrc)} />

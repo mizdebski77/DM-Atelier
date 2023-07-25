@@ -6,7 +6,9 @@ import ex3 from '../../common/Images/4.jpg';
 import ex4 from '../../common/Images/ex3.jpg';
 import { AiOutlineClose } from 'react-icons/ai'
 import { Navigation } from 'swiper/modules'
-import { closeImage, closeWrapper, openImage, openWrapper } from '../../core/animations';
+import { closeImage, closeWrapper, opacityAnimation, openImage, openWrapper, sectionAnimation } from '../../core/animations';
+import { motion } from 'framer-motion';
+import { useInViewAnimation } from '../../core/useInViewAnimation';
 export const Gallery = () => {
 
     const [fullScreen, setFullScreen] = useState<boolean>(false);
@@ -110,17 +112,28 @@ export const Gallery = () => {
         setFullScreenSrc("");
     };
 
+    const { animation, ref } = useInViewAnimation(0.5);
 
     return (
         <>
 
             <Wrapper>
                 <MainWrapper>
-                    <Title>Galeria zdjęć</Title>
+                    <Title
+                        as={motion.h1}
+                        ref={ref}
+                        variants={opacityAnimation}
+                        initial="hidden"
+                        animate={animation}
+                    >Galeria zdjęć</Title>
                 </MainWrapper>
 
                 <GalleryWrapper
-                    
+                    as={motion.div}
+                    ref={ref}
+                    variants={sectionAnimation}
+                    initial="hidden"
+                    animate={animation}
                 >
                     {data.map((img) => (
                         <Pics key={img.id}>

@@ -51,6 +51,8 @@ export const Gallery = () => {
                 <CustomSlider><Image alt="Image Gallery 2" src={ex2} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 3" src={ex} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 4" src={ex2} /></CustomSlider>
+                <CustomSlider><Image alt="Image Gallery 5" src={ex2} /></CustomSlider>
+
 
             </CustomSwiper>
         </Wrapper>

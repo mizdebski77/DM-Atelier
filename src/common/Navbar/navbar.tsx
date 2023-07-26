@@ -9,27 +9,17 @@ import { LinksAnimation, PhoneLinksWrapperAnimation, PhoneWrapperAnimation } fro
 export const Navbar = () => {
 
     const [phoneNavbar, setPhoneNavbar] = useState<boolean>(false);
-    const [scrolledNavbar, setScrolledNavbar] = useState<boolean>(true);
 
     const openPhoneNavbar = () => {
         setPhoneNavbar(!phoneNavbar);
     };
 
-    const changedNavColor = () => {
-        if (window.scrollY > 10) {
-            setScrolledNavbar(true);
-        } else {
-            setScrolledNavbar(false)
-        }
-    };
-
-    window.addEventListener("scroll", changedNavColor);
-
     const AnimatedLinks = motion(Links);
 
+    console.log(phoneNavbar)
     return (
         <>
-            <Wrapper scrolled={scrolledNavbar}>
+            <Wrapper>
                 <LogoLink to="/Strona-Główna"><Logo src={logo} alt='Logo' /> </LogoLink>
                 <LinksWrapper>
                     {links.map((link, index) => (

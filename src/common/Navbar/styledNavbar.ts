@@ -1,25 +1,21 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export const Wrapper = styled.nav <{ scrolled: boolean }>`
+export const Wrapper = styled.nav`
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
     position: sticky;
-    z-index: 10;
+    z-index: 10; 
     top:0;
+    background: ${({ theme }) => theme.color.mainColor};
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         padding: 10px;
     };
-
-    ${({ scrolled }) => scrolled && css`
-        background: ${({ theme }) => theme.color.mainColor};
-        border-bottom: 1px solid ${({ theme }) => theme.color.secondColor};
-    `};
 `;
 
 export const LogoLink = styled(Link)`

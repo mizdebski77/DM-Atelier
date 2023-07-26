@@ -89,7 +89,7 @@ export const PhoneWrapperAnimation = {
     },
 
     hidden: {
-        height: 0,
+        height: 24,
         opacity: 0,
         transition: {
             x: { velocity: 100 },

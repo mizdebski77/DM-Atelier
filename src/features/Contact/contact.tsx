@@ -6,9 +6,6 @@ import phone from './Images/phone.svg';
 import mail from './Images/email.svg';
 import { message } from 'antd';
 import emailjs from '@emailjs/browser';
-import { useInViewAnimation } from '../../core/useInViewAnimation';
-import { motion } from 'framer-motion';
-import { opacityAnimation } from '../../core/animations';
 
 export const Contact = () => {
 
@@ -38,16 +35,8 @@ export const Contact = () => {
             });
     };
 
-    const { animation, ref } = useInViewAnimation(0.5);
-
     return (
-        <Wrapper
-            as={motion.section}
-            ref={ref}
-            variants={opacityAnimation}
-            initial="hidden"
-            animate={animation}
-        >
+        <Wrapper>
             <Title>Kontakt</Title>
             <Span>Masz pytanie? Zapraszam do kontaktu</Span>
 

@@ -8,7 +8,7 @@ import { message } from 'antd';
 import emailjs from '@emailjs/browser';
 import { useInViewAnimation } from '../../core/useInViewAnimation';
 import { motion } from 'framer-motion';
-import { leftAnimation, rightAnimation } from '../../core/animations';
+import { opacityAnimation } from '../../core/animations';
 
 export const Contact = () => {
 
@@ -41,30 +41,20 @@ export const Contact = () => {
     const { animation, ref } = useInViewAnimation(0.5);
 
     return (
-        <Wrapper>
-            <Title
-                as={motion.h1}
-                ref={ref}
-                variants={rightAnimation}
-                initial="hidden"
-                animate={animation}
-            >Kontakt</Title>
-            <Span
-                as={motion.h2}
-                ref={ref}
-                variants={leftAnimation}
-                initial="hidden"
-                animate={animation}
-            >Masz pytanie? Zapraszam do kontaktu</Span>
+        <Wrapper
+            as={motion.section}
+            ref={ref}
+            variants={opacityAnimation}
+            initial="hidden"
+            animate={animation}
+        >
+            <Title>Kontakt</Title>
+            <Span>Masz pytanie? Zapraszam do kontaktu</Span>
 
             <ContactWrapper>
                 <Form
                     onSubmit={sendEmail}
                     ref={form}
-                    as={motion.form}
-                    variants={leftAnimation}
-                    initial="hidden"
-                    animate={animation}
                 >
                     <FormTitle>Formularz kontaktowy</FormTitle>
                     <InputWrapper>
@@ -76,7 +66,6 @@ export const Contact = () => {
 
                         <Select name="type" required >
                             <Option value="" disabled selected hidden>Rodzaj imprezy</Option>
-
                             <Option value="Urodziny" >Urodziny</Option>
                             <Option value="Wesele">Wesele</Option>
                             <Option value="Impreza Firmowa">Impreza firmowa</Option>
@@ -87,28 +76,18 @@ export const Contact = () => {
                     <Button>Wyślij</Button>
                 </Form>
 
-                <LinkContainer
-                    as={motion.div}
-                    ref={ref}
-                    variants={rightAnimation}
-                    initial="hidden"
-                    animate={animation}
-                >
+                <LinkContainer>
                     <LinksTitle>D'M Atelier</LinksTitle>
-
                     <LinksWrapper>
                         <TextField>
                             <SVGImage src={home} />  Olkusz Legionów Polskich
                         </TextField>
-
                         <TextField>
                             <SVGImage src={mail} /> mizdebski123@gmail.com
                         </TextField>
-
                         <TextField>
                             <SVGImage src={phone} /> 501375604
                         </TextField>
-
                         <TextField>
                             <SVGImage src={insta} /> D'M Atelier
                         </TextField>

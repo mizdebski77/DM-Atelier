@@ -3,13 +3,9 @@ import { ClientName, CustomSlider, Opinion, OpinionWrapper, Title, Wrapper } fro
 import { opinions } from './clitentsOpinions';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useInViewAnimation } from '../../../../core/useInViewAnimation';
-import { motion } from 'framer-motion';
-import { sectionAnimation } from '../../../../core/animations';
 
 export const Opinions = () => {
 
-    const { animation, ref } = useInViewAnimation(0.5);
     const settings = {
         dots: true,
         infinite: true,
@@ -21,16 +17,8 @@ export const Opinions = () => {
         arrows: false,
     };
 
-
     return (
-        <Wrapper
-            as={motion.section}
-            ref={ref}
-            variants={sectionAnimation}
-            initial="hidden"
-            animate={animation}
-        >
-
+        <Wrapper>
             <Title>Opinie naszych klientów</Title>
             <CustomSlider {...settings}>
                 {opinions.map((opinion) => (

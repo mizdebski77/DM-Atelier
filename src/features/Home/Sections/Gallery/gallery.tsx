@@ -3,24 +3,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, EffectCoverflow, Scrollbar, } from 'swiper/modules';
-
 import ex from '../../../../common/Images/exx.jpg'
 import ex2 from '../../../../common/Images/ex2.jpg'
-import { useInViewAnimation } from "../../../../core/useInViewAnimation";
-import { motion } from "framer-motion";
-import { sectionAnimation } from "../../../../core/animations";
 
 export const Gallery = () => {
-    const { animation, ref } = useInViewAnimation(0.5);
 
     return (
-        <Wrapper
-            as={motion.section}
-            ref={ref}
-            variants={sectionAnimation}
-            initial="hidden"
-            animate={animation}
-        >
+        <Wrapper>
             <Title> Galeria Zdjęć</Title>
             <CustomSwiper<React.ComponentType<any>>
 
@@ -45,15 +34,11 @@ export const Gallery = () => {
                     slideShadows: true,
                 }}
             >
-
-
                 <CustomSlider><Image alt="Image Gallery 1" src={ex} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 2" src={ex2} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 3" src={ex} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 4" src={ex2} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 5" src={ex2} /></CustomSlider>
-
-
             </CustomSwiper>
         </Wrapper>
     );

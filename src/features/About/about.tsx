@@ -1,10 +1,10 @@
 import React from 'react';
-import { PhotosSection, TextSection, Wrapper, TextsWrapper, Image, Title, TextElement} from './styledAbout';
+import { PhotosSection, TextSection, Wrapper, TextsWrapper, Image, Title, TextElement } from './styledAbout';
 import ex from '../../common/Images/example.jpg'
 import { texts } from './texts';
 import { useInViewAnimation } from '../../core/useInViewAnimation';
 import { motion } from 'framer-motion';
-import { leftAnimation, rightAnimation } from '../../core/animations';
+import { leftAnimation, opacityAnimation, rightAnimation } from '../../core/animations';
 import { Opinions } from './Opinions/opinions';
 
 
@@ -13,13 +13,15 @@ export const About = () => {
     const { animation, ref } = useInViewAnimation(0.5);
 
     return (
-        <Wrapper>
+        <Wrapper
+            as={motion.section}
+            ref={ref}
+            variants={opacityAnimation}
+            initial="hidden"
+            animate={animation}
+        >
             <PhotosSection
-                as={motion.div}
-                ref={ref}
-                variants={rightAnimation}
-                initial="hidden"
-                animate={animation}
+
             >
                 <Image smaller src={ex} />
                 <Image src={ex} />
@@ -27,11 +29,7 @@ export const About = () => {
             </PhotosSection>
 
             <TextSection
-                as={motion.div}
-                ref={ref}
-                variants={leftAnimation}
-                initial="hidden"
-                animate={animation}
+
             >
                 <Title>D'M Atelier</Title>
                 <TextsWrapper>

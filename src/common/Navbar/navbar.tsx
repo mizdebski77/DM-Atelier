@@ -16,7 +16,6 @@ export const Navbar = () => {
 
     const AnimatedLinks = motion(Links);
 
-    console.log(phoneNavbar)
     return (
         <>
             <Wrapper>

@@ -63,11 +63,17 @@ export const Links = styled(NavLink)`
         padding: 16px;
         width: 50%;
         margin: 0 auto;
+        border-radius: 0;
     };
 
     &:hover {
         transform: translateY(-5px);
         text-decoration: underline;
+
+        @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+            transform: none;
+            text-decoration: none;
+        };
     };
 
     &.${activeClassName} {
@@ -103,7 +109,7 @@ export const PhoneNavbar = styled.div`
 
 export const PhoneNavbarWrapper = styled(motion.div)`
     background: ${({ theme }) => theme.color.mainColor};
-    border-bottom: 1px solid ${({theme}) => theme.color.secondColor};
+    border-bottom: 1px solid ${({ theme }) => theme.color.secondColor};
     position: fixed;
     width: 100%;
     z-index: 99;

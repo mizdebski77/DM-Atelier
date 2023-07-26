@@ -126,7 +126,7 @@ export const Button = styled.button`
 `;
 
 export const LinkContainer = styled.div`
-
+    margin-bottom: 40px;
 `;
 
 export const LinksWrapper = styled.div`

@@ -42,7 +42,7 @@ export const CustomSwiper = styled(Swiper)`
   padding: 40px;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-      max-width: 360px;
+      max-width: 320px;
       padding: 10px;
       margin: 0 auto 20px;
   };

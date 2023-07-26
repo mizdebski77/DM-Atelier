@@ -17,6 +17,10 @@ export const MainWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      height: 200px;
+  };
 `;
 
 export const Title = styled.h1`
@@ -25,6 +29,10 @@ export const Title = styled.h1`
     font-size: 88px;
     font-weight: normal;
     font-style: italic;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      font-size: 36px;
+  };
 `;
 
 export const GalleryWrapper = styled.div`
@@ -32,6 +40,11 @@ export const GalleryWrapper = styled.div`
     max-width: 1500px;
     margin: 0 auto;
     padding: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+      column-count: 2;
+      padding: 10px;
+  };
 `;
 
 export const Pics = styled.div`
@@ -45,10 +58,14 @@ export const Image = styled.img`
 
     :hover {
         transform: scale(1.04);
+
+      @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        transform: none;
+      };
     }
 `;
 
-export const FullScreenWrapper = styled(motion.section)<{ fullScreenPhoto: boolean }>`
+export const FullScreenWrapper = styled(motion.section) <{ fullScreenPhoto: boolean }>`
     display: ${({ fullScreenPhoto }) => (fullScreenPhoto ? 'block' : 'none')};
     position: fixed;
     z-index: 10;
@@ -57,6 +74,10 @@ export const FullScreenWrapper = styled(motion.section)<{ fullScreenPhoto: boole
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
     padding: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        padding: 10px;
+    };
 `;
 
 export const CloseButton = styled.button`
@@ -70,8 +91,15 @@ export const CloseButton = styled.button`
   background: transparent;
   border: none;
 
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    right: 10px;
+  };
   :hover {
     transform: scale(1.2);
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        transform: none;
+      };
   }
 `;
 
@@ -89,7 +117,7 @@ export const FullScreenImage = styled(motion.img)`
     user-select: none;
 `;
 
-export const CustomSwiper = styled(Swiper)<{ fullScreenPhoto: boolean }>`
+export const CustomSwiper = styled(Swiper) <{ fullScreenPhoto: boolean }>`
     width: 100%;
     height: 100%;
 `;

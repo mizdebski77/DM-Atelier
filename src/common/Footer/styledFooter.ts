@@ -9,6 +9,7 @@ export const Wrapper = styled.footer`
     padding: 80px;
     height: 480px;
     border-top: 1px solid ${({theme}) => theme.color.secondColor};
+    margin-top: 40px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         display: grid;

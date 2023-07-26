@@ -5,6 +5,11 @@ export const Wrapper = styled.section`
     color: ${({ theme }) => theme.color.mainColor};
     min-height: 100vh;
     padding: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        padding: 10px;
+        gap: 20px;
+    };
 `;
 
 export const PhotosSection = styled.div`
@@ -14,6 +19,10 @@ export const PhotosSection = styled.div`
     padding: 20px;
     max-width: 1500px;
     margin: 0 auto;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        padding: 10px;
+    };
 `;
 
 export const Image = styled.img<{ smaller?: boolean }>`
@@ -22,9 +31,18 @@ export const Image = styled.img<{ smaller?: boolean }>`
     height: 400px;
     border: 2px solid wheat;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        width: 240px;
+        height: 240px;    
+    };
+
     ${({ smaller }) => smaller && css`
         width: 320px;
         height: 320px;
+
+        @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+            display: none;
+    };
     `};
 `;
 
@@ -40,12 +58,22 @@ export const Title = styled.h1`
     font-style: italic;
     text-align: center;
     margin: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 28px ;
+        margin: 20px;
+    };
 `;
 
 export const TextsWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     gap: 80px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        display: grid;
+        gap: 20px;
+    };
 `;
 
 export const TextElement = styled.p`
@@ -53,5 +81,10 @@ export const TextElement = styled.p`
     text-align: center;
     font-weight: normal;
     font-style: italic;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        font-size: 16px;
+        margin: 0;
+    };
 `;
 

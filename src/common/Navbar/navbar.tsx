@@ -3,12 +3,13 @@ import { Links, LinksWrapper, Logo, LogoLink, PhoneLinksWrapper, PhoneNavbar, Ph
 import logo from '../Images/DM Logo.png'
 import { Divide as Hamburger } from 'hamburger-react';
 import { links } from './Links';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { LinksAnimation, PhoneLinksWrapperAnimation, PhoneWrapperAnimation } from '../../core/animations';
 
 export const Navbar = () => {
 
     const [phoneNavbar, setPhoneNavbar] = useState<boolean>(false);
-    const [scrolledNavbar, setScrolledNavbar] = useState<boolean>(false);
+    const [scrolledNavbar, setScrolledNavbar] = useState<boolean>(true);
 
     const openPhoneNavbar = () => {
         setPhoneNavbar(!phoneNavbar);
@@ -24,6 +25,8 @@ export const Navbar = () => {
 
     window.addEventListener("scroll", changedNavColor);
 
+    const AnimatedLinks = motion(Links);
+
     return (
         <>
             <Wrapper scrolled={scrolledNavbar}>
@@ -35,37 +38,37 @@ export const Navbar = () => {
                         </Links>
                     ))}
                 </LinksWrapper>
-
                 <PhoneNavbar onClick={openPhoneNavbar}>
                     <Hamburger color='#161616' size={28} />
                 </PhoneNavbar>
-
-
             </Wrapper>
-            <AnimatePresence>
 
-                {phoneNavbar ? (
+            <AnimatePresence>
+                {phoneNavbar && (
                     <PhoneNavbarWrapper
-                        initial={{ height: 0 }}
-                        animate={{
-                            height: 320
-                        }}
-                        exit={{
-                            height: 0,
-                            transition: { delay: 1, duration: 0.3 }
-                        }}
+                        initial="hidden"
+                        animate={phoneNavbar ? "visible" : "hidden"}
+                        exit="hidden"
+                        variants={PhoneWrapperAnimation}
                     >
-                        <PhoneLinksWrapper>
+                        <PhoneLinksWrapper
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={PhoneLinksWrapperAnimation}
+                        >
                             {links.map((link, index) => (
-                                <Links key={index} to={link.link} onClick={() => window.scrollTo(0, 0)}
-                                >
+                                <AnimatedLinks
+                                    key={index} to={link.link} onClick={() => window.scrollTo(0, 0)}
+                                    variants={LinksAnimation}>
                                     {link.text}
-                                </Links>
+                                </AnimatedLinks>
+
                             ))}
                         </PhoneLinksWrapper>
 
                     </PhoneNavbarWrapper>
-                ) : null}
+                )}
             </AnimatePresence>
 
 

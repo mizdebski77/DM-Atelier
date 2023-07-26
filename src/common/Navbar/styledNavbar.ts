@@ -65,6 +65,8 @@ export const Links = styled(NavLink)`
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         font-size: 16px;
         padding: 16px;
+        width: 50%;
+        margin: 0 auto;
     };
 
     &:hover {
@@ -77,9 +79,9 @@ export const Links = styled(NavLink)`
         color: ${({ theme }) => theme.color.mainColor};
 
         @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
-            color: ${({ theme }) => theme.color.mainColor};
+            color: ${({ theme }) => theme.color.secondColor};
             background: transparent;
-            border-bottom: 1px solid ${({ theme }) => theme.color.mainColor};
+            border-bottom: 1px solid ${({ theme }) => theme.color.secondColor};
             border-radius: 0px;
          }
 
@@ -102,11 +104,13 @@ export const PhoneNavbar = styled.div`
   }
 `;
 
+
 export const PhoneNavbarWrapper = styled(motion.div)`
-    background: ${({ theme }) => theme.color.thirdColor};
+    background: ${({ theme }) => theme.color.mainColor};
+    border-bottom: 1px solid ${({theme}) => theme.color.secondColor};
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 99;
 
     @media (min-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: none;

@@ -9,6 +9,7 @@ import { Navigation } from 'swiper/modules'
 import { closeImage, closeWrapper, opacityAnimation, openImage, openWrapper, sectionAnimation } from '../../core/animations';
 import { motion } from 'framer-motion';
 import { useInViewAnimation } from '../../core/useInViewAnimation';
+
 export const Gallery = () => {
 
     const [fullScreen, setFullScreen] = useState<boolean>(false);

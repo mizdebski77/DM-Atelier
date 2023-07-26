@@ -6,6 +6,9 @@ import phone from './Images/phone.svg';
 import mail from './Images/email.svg';
 import { message } from 'antd';
 import emailjs from '@emailjs/browser';
+import { useInViewAnimation } from '../../core/useInViewAnimation';
+import { motion } from 'framer-motion';
+import { leftAnimation, rightAnimation } from '../../core/animations';
 
 export const Contact = () => {
 
@@ -35,16 +38,34 @@ export const Contact = () => {
             });
     };
 
-
-
+    const { animation, ref } = useInViewAnimation(0.5);
 
     return (
         <Wrapper>
-            <Title>Kontakt</Title>
-            <Span>Masz pytanie? Zapraszam do kontaktu</Span>
+            <Title
+                as={motion.h1}
+                ref={ref}
+                variants={rightAnimation}
+                initial="hidden"
+                animate={animation}
+            >Kontakt</Title>
+            <Span
+                as={motion.h2}
+                ref={ref}
+                variants={leftAnimation}
+                initial="hidden"
+                animate={animation}
+            >Masz pytanie? Zapraszam do kontaktu</Span>
 
             <ContactWrapper>
-                <Form onSubmit={sendEmail} ref={form}>
+                <Form
+                    onSubmit={sendEmail}
+                    ref={form}
+                    as={motion.form}
+                    variants={leftAnimation}
+                    initial="hidden"
+                    animate={animation}
+                >
                     <FormTitle>Formularz kontaktowy</FormTitle>
                     <InputWrapper>
                         <Input type='name' name="name" placeholder='Imię' required />
@@ -66,7 +87,13 @@ export const Contact = () => {
                     <Button>Wyślij</Button>
                 </Form>
 
-                <LinkContainer>
+                <LinkContainer
+                    as={motion.div}
+                    ref={ref}
+                    variants={rightAnimation}
+                    initial="hidden"
+                    animate={animation}
+                >
                     <LinksTitle>D'M Atelier</LinksTitle>
 
                     <LinksWrapper>

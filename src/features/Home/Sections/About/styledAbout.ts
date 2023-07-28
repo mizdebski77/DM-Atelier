@@ -53,7 +53,7 @@ export const Text = styled.span`
 `;
 
 export const CustomSlider = styled(Slider)`
-    max-width: 300px;
+    max-width: 280px;
     margin: 0 auto;
     width: 100%;
 

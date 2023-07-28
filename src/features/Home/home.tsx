@@ -8,9 +8,9 @@ import { Gallery } from './Sections/Gallery/gallery';
 const Home = () => {
     return (
         <Wrapper>
-            <Header />
+            {/* <Header />
             <About />
-            <Opinions /> 
+            <Opinions />  */}
             <Gallery />
         </Wrapper>
     );

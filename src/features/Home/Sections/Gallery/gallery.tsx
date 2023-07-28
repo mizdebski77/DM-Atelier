@@ -19,6 +19,7 @@ export const Gallery = () => {
                     },
 
                     1000: {
+                        spaceBetween:100,
                         slidesPerView: 3,
                     },
                 }}

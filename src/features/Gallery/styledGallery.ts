@@ -43,7 +43,7 @@ export const GalleryWrapper = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
       column-count: 2;
-      padding: 10px;
+      padding: 20px;
   };
 `;
 
@@ -76,7 +76,7 @@ export const FullScreenWrapper = styled(motion.section) <{ fullScreenPhoto: bool
     padding: 40px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        padding: 10px;
+        padding: 12px;
     };
 `;
 

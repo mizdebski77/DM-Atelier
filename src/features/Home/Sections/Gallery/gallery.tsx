@@ -21,7 +21,7 @@ export const Gallery = () => {
                     },
 
                     1000: {
-                        spaceBetween:100,
+                        spaceBetween:70,
                         slidesPerView: 3,
                     },
                 }}

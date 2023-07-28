@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         padding: 10px;
-        min-height: 340px;
+        min-height: 280px;
     };
 `;
 
@@ -47,6 +47,16 @@ export const CustomSlider = styled(Slider)`
     max-width: 1700px;
     margin: 0 auto;
     padding: 20px;
+
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        max-width: 1200px;
+    };
+
+        
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+        max-width: 800px;
+    };
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         max-width: 320px;

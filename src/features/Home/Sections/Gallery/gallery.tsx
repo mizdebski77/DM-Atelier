@@ -16,6 +16,8 @@ export const Gallery = () => {
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
+                        spaceBetween:50,
+
                     },
 
                     1000: {

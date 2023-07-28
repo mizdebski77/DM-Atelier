@@ -6,6 +6,11 @@ export const Wrapper = styled.section`
     padding: 20px;
     min-height: 580px;
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
+      padding: 10px;
+      min-height: 400px;
+  };
+
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
       padding: 10px;
       min-height: 200px;
@@ -46,7 +51,7 @@ export const CustomSwiper = styled(Swiper)`
       max-width: 1200px;
   };
 
-  @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+  @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
       max-width: 800px;
   };
 

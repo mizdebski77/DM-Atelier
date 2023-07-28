@@ -14,7 +14,6 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-    
         <Route path="/Strona-Główna" element={<Home />} />
         <Route path="*" element={<Suspense fallback='Loading...'> <LazyHome /></Suspense>} />
         <Route path="/O-Nas" element={<Suspense fallback='Loading...'> <About /></Suspense>} />

@@ -38,7 +38,7 @@ export const ContactWrapper = styled.div`
     gap: 80px;
     margin-top: 80px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
         grid-template-columns: 1fr;
     };
 `;
@@ -46,6 +46,7 @@ export const ContactWrapper = styled.div`
 export const Form = styled.form`
     max-width: 700px;
     width: 100%;
+    margin: 0 auto;
 `;
 
 export const FormTitle = styled.h3`

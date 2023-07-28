@@ -40,6 +40,9 @@ export const Paragraph = styled.p`
 `;
 
 export const Image = styled.img`
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        scale: 0.2;
+    };
 `;
 
 export const CustomSlider = styled(Slider)`

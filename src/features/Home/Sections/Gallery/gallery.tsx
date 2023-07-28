@@ -15,6 +15,10 @@ export const Gallery = () => {
 
                 breakpoints={{
                     768: {
+                        slidesPerView: 2,
+                    },
+
+                    1000: {
                         slidesPerView: 3,
                     },
                 }}
@@ -39,6 +43,8 @@ export const Gallery = () => {
                 <CustomSlider><Image alt="Image Gallery 3" src={ex} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 4" src={ex2} /></CustomSlider>
                 <CustomSlider><Image alt="Image Gallery 5" src={ex2} /></CustomSlider>
+                <CustomSlider><Image alt="Image Gallery 6" src={ex} /></CustomSlider>
+
             </CustomSwiper>
         </Wrapper>
     );

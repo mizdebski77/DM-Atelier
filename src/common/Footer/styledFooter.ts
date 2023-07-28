@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 export const Wrapper = styled.footer`
     display: flex;
     align-items:center;
-    justify-content: space-between;
-    padding: 80px;
+    justify-content: space-around;
+    padding: 20px;
     height: 480px;
     border-top: 1px solid ${({theme}) => theme.color.secondColor};
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: grid;
         padding: 10px;
         justify-content: center;

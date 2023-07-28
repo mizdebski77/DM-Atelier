@@ -10,7 +10,7 @@ const Home = () => {
         <Wrapper>
             <Header />
             <About />
-            <Opinions />
+            <Opinions /> 
             <Gallery />
         </Wrapper>
     );

@@ -10,6 +10,7 @@ declare module 'styled-components' {
         breakPoint: {
             firstBreakPoint: number;
             secondBreakPoint: number;
+            thirdBreakPoint: number;
             mobileMax: number;
         };
     }

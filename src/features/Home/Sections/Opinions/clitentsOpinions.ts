@@ -32,5 +32,12 @@ export const opinions: { name: string; id: number; contents: string; }[] = [
         id: 3,
         contents: "\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus adipisci illum distinctio ex rem ea, eligendi laudantium autem a minima deleniti tenetur quasi error pariatur, nihil dolores amet est.\""
 
+    },
+
+    {
+        name: "Edek I",
+        id: 9,
+        contents: "\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus adipisci illum distinctio ex rem ea, eligendi laudantium autem a minima deleniti tenetur quasi error pariatur, nihil dolores amet est.\""
+
     }
 ]

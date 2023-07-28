@@ -40,7 +40,7 @@ export const Image = styled.img<{ smaller?: boolean }>`
         width: 320px;
         height: 320px;
 
-        @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
             display: none;
     };
     `};
@@ -70,10 +70,11 @@ export const TextsWrapper = styled.div`
     justify-content: space-around;
     gap: 80px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBreakPoint}px){
         display: grid;
         gap: 20px;
     };
+
 `;
 
 export const TextElement = styled.p`

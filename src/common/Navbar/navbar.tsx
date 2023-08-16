@@ -14,7 +14,6 @@ export const Navbar = () => {
         setPhoneNavbar(!phoneNavbar);
     };
 
-    const AnimatedLinks = motion(Links);
 
     return (
         <>
@@ -47,11 +46,11 @@ export const Navbar = () => {
                             variants={PhoneLinksWrapperAnimation}
                         >
                             {links.map((link, index) => (
-                                <AnimatedLinks
+                                <Links
                                     key={index} to={link.link} onClick={() => window.scrollTo(0, 0)}
-                                    variants={LinksAnimation}>
+                                    >
                                     {link.text}
-                                </AnimatedLinks>
+                                </Links>
 
                             ))}
                         </PhoneLinksWrapper>

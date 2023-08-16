@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DM-Atelier/static/css/main.326282dc.css",
-    "main.js": "/DM-Atelier/static/js/main.612d6df6.js",
+    "main.js": "/DM-Atelier/static/js/main.4b48ac0e.js",
     "static/js/787.f934530b.chunk.js": "/DM-Atelier/static/js/787.f934530b.chunk.js",
     "static/media/background.png": "/DM-Atelier/static/media/background.07cb51e7452d112e4d4d.png",
     "static/media/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.png": "/DM-Atelier/static/media/png-transparent-martini-glass-filled-with-liquid-and-ice-cubes-bacardi-cocktail-vodka-martini-drink-glass-wine-glass-cocktail.b17461986aa072aa60e7.png",
@@ -27,11 +27,11 @@
     "static/media/email.svg": "/DM-Atelier/static/media/email.bbff4ee765252491c81dafb36428660a.svg",
     "static/media/mail.svg": "/DM-Atelier/static/media/mail.22ba122390833bb358b5a16638465917.svg",
     "main.326282dc.css.map": "/DM-Atelier/static/css/main.326282dc.css.map",
-    "main.612d6df6.js.map": "/DM-Atelier/static/js/main.612d6df6.js.map",
+    "main.4b48ac0e.js.map": "/DM-Atelier/static/js/main.4b48ac0e.js.map",
     "787.f934530b.chunk.js.map": "/DM-Atelier/static/js/787.f934530b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.326282dc.css",
-    "static/js/main.612d6df6.js"
+    "static/js/main.4b48ac0e.js"
   ]
 }

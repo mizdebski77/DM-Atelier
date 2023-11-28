@@ -48,7 +48,7 @@ export const Navbar = () => {
                             {links.map((link, index) => (
                                 <Links
                                     key={index} to={link.link} onClick={() => window.scrollTo(0, 0)}
-                                    >
+                                >
                                     {link.text}
                                 </Links>
 

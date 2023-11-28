@@ -39,6 +39,8 @@ export const Gallery = () => {
     const openFullScreen = (src: string) => {
         setFullScreenSrc(src);
         setFullScreen(true);
+        console.log(src);
+        
     };
 
     const closeFullScreen = () => {
